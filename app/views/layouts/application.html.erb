@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Smockle</title>
+  
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  
+  <script>
+  I18n.defaultLocale = "<%= I18n.default_locale %>";
+  I18n.locale = "<%= I18n.locale %>";
+  </script>
+</head>
+<body>
+
+<%= yield %>
+
+<footer role="contentinfo">
+	<div class="container">
+		<div class="row">
+			<p class="span12 vcenter">Copyright &copy; <%= Time.now.year %> Clay Miller. <a href="/<%= I18n.locale %>/home/credits"><%=t :credits %>.</a></p>
+		</div>		
+	</div>
+</footer>
+
+</body>
+</html>

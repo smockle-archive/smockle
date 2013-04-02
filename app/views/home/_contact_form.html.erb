@@ -1,0 +1,56 @@
+<%= form_for @message, :url => { :action => "create", :controller => "home" }, :method => :post, :html => { :class => "form-horizontal" } do |f| %>
+  <div class="control-group">
+    <%= f.label :first, @labels["first"], :class => "control-label" %>
+		<div class="controls">
+		  <%= f.text_field :first, :class => "span6", :placeholder => "Clay", :"data-placeholder" => "Clay" %>
+		</div>
+	</div>
+	
+	<div class="control-group">
+    <%= f.label :last, @labels["last"], :class => "control-label" %>
+		<div class="controls">
+		  <%= f.text_field :last, :class => "span6", :placeholder => "Miller", :"data-placeholder" => "Miller" %>
+		</div>
+	</div>
+  
+ 	<div class="control-group">
+    <%= f.label :organization, @labels["organization"], :class => "control-label" %>
+		<div class="controls">
+		  <%= f.text_field :organization, :class => "span6", :placeholder => "Smockle, LLC.", :"data-placeholder" => "Smockle, LLC." %>
+		</div>
+	</div>
+
+ 	<div class="control-group">
+    <%= f.label :email, :class => "control-label" %>
+		<div class="controls">
+		  <%= f.text_field :email, :class => "span6", :placeholder => "clay@smockle.com", :"data-placeholder" => "clay@smockle.com" %>
+		</div>
+	</div>
+	
+	<div class="control-group">
+    <%= f.label :phone, @labels["phone"], :class => "control-label" %>
+		<div class="controls">
+		  <%= f.text_field :phone, :class => "span6", :placeholder => "(800) 000-0000", :"data-placeholder" => "(800) 000-0000", :type => "tel" %>
+		</div>
+	</div>
+ 
+	<div class="control-group">
+    <%= f.label :reason, @labels["reason"], :class => "control-label" %>
+		<div class="controls">
+		    <%= f.select :reason, @reasons.map {|r| [I18n.locale == :es ? r.reason_es : r.reason, r.id]}, {}, :class => "span6" %>
+		</div>
+	</div>
+
+ 	<div class="control-group">
+    <%= f.label :message, @labels["message"], :class => "control-label" %>
+		<div class="controls">
+		  <%= f.text_area :message, :class => "span6", :rows => "3" %>
+		</div>
+	</div>
+  
+<!--
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+-->
+<% end %>

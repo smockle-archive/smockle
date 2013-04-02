@@ -1,3 +1,6 @@
+.DS_Store
+
+# From GitHub:
 *.rbc
 *.sassc
 .sass-cache
@@ -14,3 +17,6 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+
+# FIXME: Find a better way to hide sensitive information.
+/config/*

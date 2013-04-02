@@ -1,0 +1,35 @@
+<%= render "nav" %>
+
+<div class="row">
+	<h1 class="span12"><%=t :contact_title %></h1>
+</div>
+
+<div class="row holdable-small">
+	<div class="span5">
+		<div class="row holdable-large">
+		  <div class="span5">
+  		  <%= render "contact_message" %>
+		  </div>
+		</div>
+		
+		<div class="row movable">
+			<div class="span5 icn">
+				<i class="icon-arrow-down"></i>
+			</div>
+		</div>
+		
+		<div class="row movable">
+			<div class="span3 offset1">
+				<button class="btn btn-large btn-primary btn-block" type="submit"><%=t :submit %></button>
+			</div>
+		</div>
+	</div>
+	
+	<div class="span7">
+		<%= render "contact_form" %>	
+	</div>
+</div>
+
+<div class="row">
+	<a class="span12 icn"><i class="icon-chevron-down"></i></a>
+</div>
