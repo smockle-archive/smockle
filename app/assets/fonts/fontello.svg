@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20110222 at Sun May  5 12:30:36 2013
+Created by FontForge 20110222 at Sun May  5 13:13:14 2013
  By root
 Copyright (C) 2012 by original authors @ fontello.com
 </metadata>
@@ -16,7 +16,7 @@ Copyright (C) 2012 by original authors @ fontello.com
     panose-1="2 0 6 3 0 0 0 0 0 0"
     ascent="850"
     descent="-150"
-    bbox="15 -138 1086 820"
+    bbox="15 -150 1086 820"
     underline-thickness="50"
     underline-position="-100"
     unicode-range="U+2601-1F680"
@@ -50,6 +50,9 @@ q0 118 84 202t202 84h35q14 0 25 -11t11 -25v-72q0 -14 -11 -24.5t-25 -10.5h-35q-59
     <glyph glyph-name="uniF10E" unicode="&#xf10e;" 
 d="M122 350q-44 0 -75.5 31.5t-31.5 75.5v214q0 44 31.5 76t75.5 32h214q44 0 76 -32t32 -76v-392q0 -118 -84 -202t-202 -84h-36q-14 0 -25 11t-11 25v71q0 14 11 25t25 11h36q58 0 100.5 42t42.5 101v17q0 22 -15.5 38t-38.5 16h-125zM515 457v214q0 44 31.5 76t75.5 32
 h214q44 0 76 -32t32 -76v-392q0 -118 -84 -202t-202 -84h-36q-14 0 -25 11t-11 25v71q0 14 11 25t25 11h36q58 0 100.5 42t42.5 101v17q0 22 -15.5 38t-38.5 16h-125q-44 0 -75.5 31.5t-31.5 75.5z" />
+    <glyph glyph-name="u1F50D" unicode="&#x1f50d;" 
+d="M944 -79q0 -28 -21.5 -49.5t-50.5 -21.5q-30 0 -50 21l-191 191q-101 -69 -223 -69q-83 0 -155 32t-123 83t-83 123t-32 155t32 155t83 123t123 83t155 32t155 -32t123 -83t83 -123t32 -155q0 -122 -69 -223l191 -191q21 -21 21 -51zM158 386q0 -104 73 -177t177 -73
+q103 0 176 73q74 74 74 177q0 102 -74 176t-176 74q-103 0 -177 -74q-73 -73 -73 -176z" />
     <glyph glyph-name="u1F527" unicode="&#x1f527;" horiz-adv-x="946" 
 d="M416 424q22 -54 64.5 -96.5t96.5 -64.5l-381 -381q-20 -20 -50 -20t-51 20l-59 61q-21 19 -21 50q0 30 21 51zM146 29q0 -14 11 -25t25 -11t25 11t11 25t-11 24.5t-25 10.5t-25 -10.5t-11 -24.5zM432 529q0 103 73 176q74 74 177 74q76 0 128 -36q9 -6 9 -15
 q0 -10 -9 -16l-164 -94v-125l108 -60q9 6 32.5 20t52 31t35.5 21q35 20 39 20q18 0 18 -19q0 -23 -13 -59q-25 -70 -89 -119t-147 -49q-104 0 -177 73t-73 177z" />

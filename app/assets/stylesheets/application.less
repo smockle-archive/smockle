@@ -79,6 +79,7 @@ body {
 		padding: 0 5%;
 		position: static;
 		width: 100%;
+		z-index: 2;
 		
 		@media screen and (min-width: 50em) {
 			padding: 0 15%;
@@ -157,11 +158,35 @@ body {
 			div {
 				display: inline-block;
 				margin-top: 1rem;
+				position: relative;
 				text-align: left;
 				width: 100%;
+				z-index: 1;
 
 				&:nth-of-type(n+4) {
 					display: none;
+				}
+				
+				.hover {
+				    display: none;
+					height: 200px;
+					width: 200px;
+				    position: absolute;
+				    bottom: 0; left: 50%;
+					margin-left: -100px;
+					
+					i {
+						font-size: 48px;
+						left: 50%; top: 50%;
+						margin: -24px 0 0 -32px;
+						position: absolute;
+					}
+				}
+
+				&:hover .hover {
+				    display: block;
+					background-color: black;
+					opacity: .5;
 				}
 				
 				@media screen and (min-width: 50em) {
