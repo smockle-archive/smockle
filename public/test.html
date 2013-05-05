@@ -1,185 +1,18 @@
 <html>
 <head>
-	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-	<style>
-	::selection {
-		color: white;
-		background: #C5767C;
-	}
-
-	::-moz-selection {
-		color: white;
-		background: #C5767C;
-	}
-	input:focus, select:focus, textarea:focus {
-		outline: 2px solid #C5767C;
-	}
-	a {
-		text-decoration: none;
-	}
-	body {
-		background-color: #363F48;
-		color: white;
-		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-		margin: auto;
-	}
-	header {
-		background-color: #363F48;
-		padding: 0 15%;
-		position: fixed;
-		width: 70%;
-	}
-	h1 {
-		font-weight: normal;
-		font-family: "Pacifico", serif;
-		font-size: 2.2rem;
-		letter-spacing: .1rem;
-		display: inline-block;
-	}
-	header nav {
-		display: inline-block;
-		margin-top: 3rem;
-		float: right;
-	}
-	header nav a {
-		color: white;
-		font-size: .8rem;
-		font-weight: bold;
-		margin-left: .8rem;
-		padding: .4rem  0;
-	}
-	header nav a.active {
-		border-bottom: 2px solid #C5767C;
-	}
-	p {
-		font-size: .9rem;
-		line-height: 1.4rem;
-	}
-	article p,
-	blockquote {
-		font-size: 1.8rem;
-		font-weight: 200;
-		color: #A7ABB1;
-		line-height: 2.2rem;
-	}
-	footer,
-	section {
-		text-align: center;
-		padding: 5% 15%;
-	}
-	footer,
-	section:nth-of-type(3n+1) {
-		background-color: #363F48;
-		color: white;
-	}
-	footer p,
-	section#intro h3 {
-		color: #A7ABB1;
-	}
-	section:nth-of-type(3n+2) {
-		background-color: #EFF2F4;
-		color: #363F48;
-	}
-	section:nth-of-type(3n+3) {
-		background-color: white;
-		color: #55606E;
-	}
-	section article {
-		display: inline-block;
-		text-align: left;
-		width: 49%;
-		vertical-align: top;
-	}
-	section article:nth-of-type(n+3) {
-		margin-top: 2rem;
-	}
-	section article cite,
-	section article p,
-	section article blockquote {
-		display: block;
-		margin: 0 auto;
-		width: 60%;
-	}
-	section#intro {
-		padding-top: 10%;
-	}
-	section article cite {
-		font-size: .9rem;
-		line-height: 1.4rem;
-		text-align: right;
-		font-style: normal;
-	}
-	section:not(#contact) div {
-		display: inline-block;
-		text-align: left;
-		width: 33%;
-	}
-	section#contact div {
-		margin: auto;
-		text-align: left;
-		width: 80%;
-	}
-	h2 {
-		font-size: 3.5rem;
-		font-weight: 200;
-		line-height: 4.9rem;
-		margin: 0 0 1rem 0;
-	}
-	h3 {
-		font-size: 1.8rem;
-		font-weight: 200;
-		margin: 0 0 1rem 0;
-		text-align: center;
-	}
-	h4 {
-		font-size: 1.2rem;
-		font-weight: 200;
-		margin: 0 0 1rem 0;
-		text-align: center;
-	}
-	section article img,
-	section div img {
-		display: block;
-		margin: 0 auto;
-	}
-	section div:nth-of-type(n+4) {
-		margin-top: 1rem;
-	}
-	section#contact input[type=text] {
-		margin-top: 1rem;
-		border: 1px solid #363F48;
-		height: 2rem;
-		font-size: .9rem;
-		line-height: 1.4rem;
-		width: 40%;
-		margin-left: 60%;
-	}
-	section#contact h4 {
-		text-align: left;
-	}
-	section#contact div label {
-		margin-bottom: 1rem;
-		width: 16rem;
-		margin-left: 60%;
-	}
-	section#contact div textarea {
-		height: 20rem;
-		margin-bottom: 1rem;
-		width: 100%;
-		border: 1px solid #363F48;
-		padding: 1rem;
-		font-size: .9rem;
-		line-height: 1.4rem;
-	}
-	</style>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link href="../app/assets/stylesheets/fontello.css" rel="stylesheet">
+	<link href="../app/assets/stylesheets/application.less" rel="stylesheet/less">
+	<script src="../app/assets/javascripts/less-1.3.3.min.js"></script>
+	<script defer src="../app/assets/javascripts/application.js"></script>
 </head>
 <body>
 	<header>
 		<h1>Smockle.</h1>
 		<nav>
-			<a class="active" href="#about">ABOUT</a>
+			<a href="#about">ABOUT</a>
 			<a href="#work">WORK</a>
-			<a href="#blog">BLOG</a>
+			<a href="#feeds">FEEDS</a>
 			<a href="#contact">CONTACT</a>
 		</nav>
 	</header>
@@ -187,24 +20,24 @@
 	<section id="intro">
 		<h2>I'm Clay Miller,<br>
 			and I build the Internet.</h2>
-		<h3>Lorem ipsum ison dolor sit amet.</h3>
+		<h3>Lorem ipsum isom dolor sit amet.</h3>
 	</section>
 	
 	<section id="about">
 		<h3>Here are my skills:</h3>
 		<div>
 			<h4>Design</h4>
-			<img src="http://placehold.it/200x200">
+			<i class="icon-flow-tree"></i>
 			<p>Donec tincidunt pretium condimentum. Cras nisl nunc, aliquam ut varius nec, porttitor a ipsum.</p>
 		</div>
 		<div>
 			<h4>Develop</h4>
-			<img src="http://placehold.it/200x200">
+			<i class="icon-wrench"></i>
 			<p>Donec tincidunt pretium condimentum. Cras nisl nunc, aliquam ut varius nec, porttitor a ipsum.</p>
 		</div>
 		<div>
 			<h4>Deploy</h4>
-			<img src="http://placehold.it/200x200">
+			<i class="icon-rocket"></i>
 			<p>Donec tincidunt pretium condimentum. Cras nisl nunc, aliquam ut varius nec, porttitor a ipsum.</p>
 		</div>
 	</section>
@@ -237,7 +70,7 @@
 		</div>
 	</section>
 	
-	<section id="blog">
+	<section id="feeds">
 		<h3>Here are my feeds:</h3>
 		<article>
 			<blockquote>"Donec tincidunt pretium condimentum. @Cras nisl nunc, aliquam ut varius nec, porttitor a #ipsum"</blockquote>
@@ -261,16 +94,16 @@
 		<h3>Contact me! Talk about a project, or just say hello.</h3>
 		<div>
 			<h4>Dear Smockle,</h4>
-			<textarea></textarea>
+			<textarea placeholder="Your message. You could describe a project you'd like to work on, or you could ask more about my work. I can't wait to hear from you!"></textarea>
 			<label>
 				Sincerely,<br>
-				<input type="text"></input>
+				<input type="text" placeholder="Your name."></input>
 			</label>
 		</div>
 	</section>
 	
 	<footer>
-		<p>Copyright &copy; 2013 Clay Miller. All rights reserved.</p>
+		<p>Copyright &copy; <span class="year">2013</span> Clay Miller. All rights reserved.</p>
 	</footer>
 </body>
 </html>

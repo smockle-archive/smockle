@@ -13,3 +13,18 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+/* Copyright
+ * Displays the current year in the footer.
+ */
+function copyright() {
+	var year = document.querySelector("footer .year");
+	year.innerHTML = new Date().getFullYear();
+}
+
+function ready(event) {
+	copyright();
+    window.removeEventListener("DOMContentLoaded", ready);
+}
+
+window.addEventListener("DOMContentLoaded", ready);

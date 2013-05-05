@@ -1,0 +1,274 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+// Colors
+@red: #c5767c;
+@black: #363f48;
+@beige: #eff2f4;
+@gray: #a7abb1;
+@text: #55606e;
+
+// Fonts
+@font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Selection
+::selection {
+	color: white;
+	background: @red;
+}
+
+::-moz-selection {
+	color: white;
+	background: @red;
+}
+
+body {
+	background-color: @black;
+	color: white;
+	font-family: @font;
+	margin: auto;
+	
+	a {
+		text-decoration: none;
+	}
+
+	h2 {
+		font: 200 3.5rem/4.9rem @font;
+		margin: 0 0 1rem 0;
+	}
+	
+	h3 {
+		font: 200 1.8rem @font;
+		margin: 0 0 1rem 0;
+		text-align: center;
+	}
+	
+	h4 {
+		font: 200 1.2rem @font;
+		margin: 0 0 1rem 0;
+		text-align: center;
+	}
+	
+	input, select, textarea {
+		border: 1px solid @black;
+		font: .9rem/1.4rem @font;
+		height: 2rem;
+		padding: 1rem;
+	}
+	input:focus, select:focus, textarea:focus {
+		outline: 2px solid @red;
+	}
+	
+	p {
+		font: .9rem/1.4rem @font;
+	}
+
+	header {
+		background-color: @black;
+		padding: 0 5%;
+		position: static;
+		width: 100%;
+		
+		@media screen and (min-width: 50em) {
+			padding: 0 15%;
+			position: fixed;
+			width: 70%;
+		}
+		
+		h1 {
+			display: block;
+			font: 2.2rem "Pacifico", serif;
+			letter-spacing: .1rem;
+			
+			@media screen and (min-width: 50em) {
+				display: inline-block;
+			}
+		}
+		
+		nav {
+			display: block;
+			font: bold .8rem @font;
+			margin-top: 3rem;
+
+			a {
+				color: white;
+				margin-left: .8rem;
+				padding: .4rem  0;
+				
+				&:first-of-type {
+					border-bottom: 2px solid @red;
+					margin-left: 0;
+				}
+			}
+			
+			@media screen and (min-width: 50em) {
+				display: inline-block;
+				float: right;
+			}
+		}
+	}
+
+	section,
+	footer {
+		text-align: center;
+		padding: 5%;
+		
+		@media screen and (min-width: 50em) {
+			padding: 5% 15%;
+		}
+	}
+	
+	section {
+		&:nth-of-type(1) {
+			padding-top: 10%;
+		}
+		
+		&:nth-of-type(3n+1) {
+			background-color: @black;
+			color: white;
+		
+			h3 {
+				color: @gray;
+			}
+		}
+	
+		&:nth-of-type(3n+2) {
+			background-color: @beige;
+			color: @black;
+		}
+		
+		&:nth-of-type(3n+3) {
+			background-color: white;
+			color: @text;
+		}
+		
+		&:not(#contact) {
+			div {
+				display: inline-block;
+				margin-top: 1rem;
+				text-align: left;
+				width: 100%;
+
+				&:nth-of-type(n+4) {
+					display: none;
+				}
+				
+				@media screen and (min-width: 50em) {
+					margin-top: 0;
+					width: 33%;
+					
+					&:nth-of-type(n+4) {
+						display: inline-block;
+						margin-top: 1rem;
+					}
+				}
+				
+				i {
+					display: block;
+					font-size: 14rem;
+					text-align: center;
+				}
+			}
+			
+			article img,
+			div img {
+				display: block;
+				margin: 0 auto;
+			}
+			
+			article {
+				display: inline-block;
+				text-align: left;
+				margin-top: 2rem;
+				width: 100%;
+				vertical-align: top;
+		
+				@media screen and (min-width: 50em) {
+					width: 49%;
+					
+					&:nth-of-type(1),
+					&:nth-of-type(2) {
+						margin-top: 0;
+					}
+				}
+
+				blockquote,
+				cite,
+				p {
+					font: 200 1.6rem/2rem @font;
+					display: block;
+					margin: 0 auto;
+					width: 100%;
+					
+					@media screen and (min-width: 50em) {
+						font: 200 1.8rem/2.2rem @font;
+						width: 60%;
+					}
+				}
+		
+				cite {
+					color: @gray;
+					font: normal .9rem/1.4rem @font;
+					text-align: right;
+				}
+			}	
+		}
+		
+		&#contact {
+			div {
+				margin: auto;
+				text-align: left;
+				width: 100%;
+				
+				@media screen and (min-width: 50em) {
+					width: 80%;
+				}
+				
+				h4 {
+					text-align: left;
+				}
+				
+				textarea {
+					height: 20rem;
+					margin-bottom: 1rem;
+					width: 100%;
+				}
+				
+				label {
+					margin: 0 0 1rem 40%;
+					width: 16rem;
+					
+					input[type=text] {
+						margin: 1rem 0 0 40%;
+						width: 60%;
+					}
+					
+					@media screen and (min-width: 50em) {
+						margin: 0 0 1rem 60%;
+						
+						input[type=text] {
+							margin: 1rem 0 0 60%;
+							width: 40%;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	footer {
+		background-color: @black;
+		color: @gray;
+	}
+}
