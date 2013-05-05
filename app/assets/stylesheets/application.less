@@ -206,34 +206,39 @@ body {
 					}
 				}
 				
-				.hover {
-					bottom: 0;
-				    display: none;
-					height: 200px;
-					left: 50%;
-					margin-left: -100px;
-				    position: absolute;
+				a {
+					display: block;
+					margin: 0 auto;
 					width: 200px;
 					
-					i {
-						font-size: 48px;
-						left: 50%; top: 50%;
-						margin: -24px 0 0 -32px;
-						position: absolute;
+					&:hover {
+						background: rgba(0, 0, 0, 0.5);
 					}
-				}
-
-				&:hover .hover {
-					background-color: black;
-				    display: block;
-					opacity: .5;
+					
+					&:hover:before {
+						color: white;
+						content: "\1f50d";
+						font-size: 3rem;
+						font-family: "fontello";
+						left: 50%;
+						margin: -.8rem 0 0 -1.5rem;
+						opacity: .5;
+						position: absolute;
+						top: 50%;
+					}
 				}
 			}
 			
 			article img,
 			div img {
 				display: block;
+				height: auto;
 				margin: 0 auto;
+				max-width: 100%;
+				position: relative;
+				vertical-align: bottom;
+				width: auto;
+				z-index: -1;
 			}
 			
 			article {
