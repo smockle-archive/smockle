@@ -18,5 +18,5 @@ capybara-*.html
 rerun.txt
 pickle-email-*.html
 
-# FIXME: Find a better way to hide sensitive information.
-/config/*
+# Ignore application configuration
+/config/application.yml
