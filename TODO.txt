@@ -1,0 +1,6 @@
+Clicking work images should open full image and quotes.
+Stack Overflow question should be clickable.
+Only show Instagram photos tagged "#sfw".
+Get commit and gist data from Github.
+Show submit button when message and from are populated.
+Send message when submit button is clicked.
