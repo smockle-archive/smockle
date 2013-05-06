@@ -9,7 +9,7 @@
 	<div>
 		<h4>Design</h4>
 		<i class="icon-flow-tree"></i>
-		<p>I discuss project details with my clients and then create basic site mockups. I use CSS, LESS and SASS to deliver premier web experinces.</p>
+		<p>I discuss project details with my clients and then create basic site mockups. I use CSS, LESS and SASS to deliver premier web experiences.</p>
 	</div>
 	<div>
 		<h4>Develop</h4>
@@ -65,22 +65,26 @@
 
 <section id="feeds">
 	<h3>Here are my feeds:</h3>
-	<article>
-		<blockquote><%= @tweet.html_safe %></blockquote>
-		<cite>via <a href="https://twitter.com/smockled">Twitter</a></cite>
-	</article>
-	<article>
-		<blockquote>"Question: Tincidunt pretium condimentum. Cras nisl nunc, aliquam ut varius nec, porttitor a ipsum?"</blockquote>
-		<cite>via Stack Overflow</cite>
-	</article>
-	<article>
-		<img src="http://placehold.it/400x200">
-		<cite>via Instagram</cite>
-	</article>
-	<article>
-		<p>"42 commits this week to smockle and 6 other repositories. 3 new gists."</p>
-		<cite>via Github</cite>
-	</article>
+	<div>
+  	<article>
+  		<img src="<%= @image.html_safe %>">
+  		<cite>via <a href="https://instagram.com/claydm">Instagram</a></cite>
+  	</article>
+	</div>
+	<div>
+  	<article>
+  		<blockquote><%= @tweet.html_safe %></blockquote>
+  		<cite>via <a href="https://twitter.com/smockled">Twitter</a></cite>
+  	</article>
+  	<article>
+  		<blockquote>Question: <%= @question.html_safe %></blockquote>
+  		<cite>via <a href="https://stackoverflow.com/users/1923134/smockle">Stack Overflow</a></cite>
+  	</article>
+  	<article>
+  		<p>"42 commits this week to smockle and 6 other repositories. 3 new gists."</p>
+  		<cite>via <a href="https://github.com/smockle">Github</a></cite>
+  	</article>
+	</div>
 </section>
 
 <section id="contact">

@@ -40,3 +40,4 @@ gem 'jquery-rails'
 
 gem 'twitter'
 gem 'twitter-text'
+gem 'httparty'
