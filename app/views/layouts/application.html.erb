@@ -2,13 +2,24 @@
 <html>
 <head>
   <title>Smockle</title>
+  <link href="//fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+	<header>
+		<h1>Smockle.</h1>
+		<nav>
+			<a href="#about">ABOUT</a>
+			<a href="#work">WORK</a>
+			<a href="#feeds">FEEDS</a>
+			<a href="#contact">CONTACT</a>
+		</nav>
+	</header>
 <%= yield %>
-
+	<footer>
+		<p>Copyright &copy; <span class="year">2013</span> Clay Miller. All rights reserved.</p>
+	</footer>
 </body>
 </html>

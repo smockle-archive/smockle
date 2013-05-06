@@ -1,14 +1,17 @@
 /* Scroll
  * When included with a project, scrolling by section is automatically enabled.
  * Copyright © 2013 Clay Miller (clay@smockle.com)
- * MODIFIED FOR SMOCKLE.COM.
  */
 
 var lid;
-var sections = $("nav a").map(function() {
-	var item = $($(this).attr("href"));
-	if (item.length) { return item; }
-});
+var sections;
+
+$(function () {
+  sections = $("nav a").map(function() {
+  	var item = $($(this).attr("href"));
+  	if (item.length) { return item; }
+  });
+})
 
 function click(e) {
 	$(window).off("scroll");

@@ -1,2 +1,96 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<section id="intro">
+	<h2>I'm Clay Miller,<br>
+		and I build the Internet.</h2>
+	<h3>Lorem ipsum isom dolor sit amet.</h3>
+</section>
+
+<section id="about">
+	<h3>Here are my skills:</h3>
+	<div>
+		<h4>Design</h4>
+		<i class="icon-flow-tree"></i>
+		<p>I discuss project details with my clients and then create basic site mockups. I use CSS, LESS and SASS to deliver premier web experinces.</p>
+	</div>
+	<div>
+		<h4>Develop</h4>
+		<i class="icon-wrench"></i>
+		<p>I build websites using Ruby on Rails or ASP.NET MVC. I've written a few jQuery plugins, and I've also set up WordPress blogs.</p>
+	</div>
+	<div>
+		<h4>Deploy</h4>
+		<i class="icon-rocket"></i>
+		<p>I tweak my sites until everything is just right, and then work with my clients to share them with the world.</p>
+	</div>
+</section>
+
+<section id="work">
+	<h3>Here are my recent projects:</h3>
+	<div>
+		<h4>Faculty Profiles</h4>
+		<a href="#">
+			<div class="image"></div>
+		</a>
+	</div>
+	<div>
+		<h4>Educational Resources</h4>
+		<a href="#">
+			<div class="image"></div>
+		</a>
+	</div>
+	<div>
+		<h4>Classroom Administration</h4>
+		<a href="#">
+			<div class="image"></div>
+		</a>
+	</div>
+	<div>
+		<h4>News Release</h4>
+		<a href="#">
+			<div class="image"></div>
+		</a>
+	</div>
+	<div>
+		<h4>Employee Directory</h4>
+		<a href="#">
+			<div class="image"></div>
+		</a>
+	</div>
+	<div>
+		<h4>Smockle</h4>
+		<a href="#">
+			<div class="image"></div>
+		</a>
+	</div>
+</section>
+
+<section id="feeds">
+	<h3>Here are my feeds:</h3>
+	<article>
+		<blockquote><%= @tweet.html_safe %></blockquote>
+		<cite>via <a href="https://twitter.com/smockled">Twitter</a></cite>
+	</article>
+	<article>
+		<blockquote>"Question: Tincidunt pretium condimentum. Cras nisl nunc, aliquam ut varius nec, porttitor a ipsum?"</blockquote>
+		<cite>via Stack Overflow</cite>
+	</article>
+	<article>
+		<img src="http://placehold.it/400x200">
+		<cite>via Instagram</cite>
+	</article>
+	<article>
+		<p>"42 commits this week to smockle and 6 other repositories. 3 new gists."</p>
+		<cite>via Github</cite>
+	</article>
+</section>
+
+<section id="contact">
+	<h3>Contact me! Talk about a project, or just say hello.</h3>
+	<div>
+		<h4>Dear Smockle,</h4>
+		<textarea placeholder="Your message. You could describe a project you'd like to work on, or you could ask more about my work. I can't wait to hear from you!"></textarea>
+		<label>
+			Sincerely,<br>
+			<input type="text" placeholder="Your name."></input>
+		</label>
+	</div>
+</section>
