@@ -4,5 +4,4 @@ Only show Instagram photos tagged "#sfw".
 Get commit and gist data from Github.
 Show submit button when message and from are populated.
 Send message when submit button is clicked.
-Custom error pages.
 Include tips from the HTML5 Boilerplate.
