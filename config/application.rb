@@ -65,5 +65,8 @@ module Smockle
       config.oauth_token = Figaro.env.TWITTER_AUTH_TOKEN
       config.oauth_token_secret = Figaro.env.TWITTER_AUTH_SECRET
     end
+    
+    # Enable custom error pages.
+    config.exceptions_app = self.routes
   end
 end

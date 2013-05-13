@@ -14,6 +14,37 @@
 //= require jquery_ujs
 //= require_tree .
 
-$(function() {
-	$("footer .year").html(new Date().getFullYear());
+// Using the Garber-Irish method:
+// http://viget.com/inspire/extending-paul-irishs-comprehensive-dom-ready-execution
+
+SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, 
+{
+  common: {
+    init: function() {
+      $("footer .year").html(new Date().getFullYear());
+    }
+  }
 });
+ 
+UTIL = {
+  exec: function(controller, action) {
+    var ns = SMOCKLE,
+        action = (action === undefined) ? "init" : action;
+ 
+    if (controller !== "" && ns[controller] && typeof ns[controller][action] == "function") {
+      ns[controller][action]();
+    }
+  },
+ 
+  init: function() {
+    var body = document.body,
+        controller = body.getAttribute("data-controller"),
+        action = body.getAttribute("data-action");
+ 
+    UTIL.exec("common");
+    UTIL.exec(controller);
+    UTIL.exec(controller, action);
+  }
+};
+ 
+$(document).ready(UTIL.init);

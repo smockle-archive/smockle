@@ -1,0 +1,231 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  #intro {
+  		margin-top: 2rem;
+			
+			@media screen and (min-width: 50em) {
+				margin-top: 5rem;
+			}
+  }
+  
+  #about {
+			div {
+				box-sizing: border-box;
+				display: inline-block;
+				margin-top: 1rem;
+				position: relative;
+				text-align: left;
+				vertical-align: top;
+				width: 100%;
+				z-index: 1;
+				
+				@media screen and (min-width: 50em) {
+					margin-top: 0;
+					margin-left: 2%;
+					width: 31%;
+					
+					&:nth-of-type(3n+1) {
+						margin-left: 0;
+					}
+				}
+		}  		
+  }
+		
+  #work {
+			div {
+				box-sizing: border-box;
+				display: inline-block;
+				margin-top: 1rem;
+				position: relative;
+				text-align: left;
+				vertical-align: top;
+				width: 100%;
+				z-index: 1;
+				
+				&:nth-of-type(n+4) {
+					display: none;
+				}
+				
+				@media screen and (min-width: 50em) {
+					margin-top: 0;
+					margin-left: 1.4%;
+					width: 32%;
+					
+					&:nth-of-type(3n+1) {
+						margin-left: 0;
+					}
+					
+					&:nth-of-type(n+4) {
+						display: inline-block;
+						margin-top: 2rem;
+					}
+				}
+				
+				// Images.
+				&:nth-of-type(1) .image {
+					background: url(/assets/work/1.png) no-repeat center;
+				}
+				&:nth-of-type(2) .image {
+					background: url(/assets/work/2.png) no-repeat 40% 42%;
+				}
+				&:nth-of-type(3) .image {
+					background: url(/assets/work/3.png) no-repeat 50% 64%;
+				}
+				&:nth-of-type(4) .image {
+					background: url(/assets/work/4.png) no-repeat 47% 23%;
+				}
+				&:nth-of-type(5) .image {
+					background: url(/assets/work/5.png) no-repeat 16% 54%;
+				}
+				&:nth-of-type(6) .image {
+					background: url(/assets/work/6.png) no-repeat center;
+				}
+				a {
+					display: block;
+					margin: 0 10%;
+					width: 80%;
+					
+					&:hover {
+						background: rgba(0, 0, 0, 0.5);
+					}
+					
+					&:hover:before {
+						color: white;
+						content: "\1f50d";
+						font-size: 3rem;
+						font-family: "fontello";
+						left: 50%;
+						margin: -.8rem 0 0 -1.5rem;
+						opacity: .5;
+						position: absolute;
+						top: 50%;
+					}
+					
+					.image {
+						border: 1px solid @gray;
+						height: 10rem;
+						width: 100%;
+						z-index: -1;
+					}
+				}
+			}
+			
+			div .image {
+				display: block;
+				height: auto;
+				margin: 0 auto;
+				max-height: 24rem;
+				max-width: 100%;
+				position: relative;
+				vertical-align: bottom;
+				width: auto;
+			}
+		}
+		
+  #feeds {
+  		div:nth-of-type(1) {
+  		  display: inline-block;
+  		  vertical-align: top;
+  		  width: 100%;
+  		  
+  		  @media screen and (min-width: 50em) {
+    		  width: 33%;
+  		  }
+  		  
+  		  img {
+  		    max-height: 20rem;
+      		max-width: 100%;
+      		
+      		@media screen and (min-width: 50em) {
+        		max-height: 100%;
+      		}
+    		}
+  		}
+  		
+  		div:nth-of-type(2) {
+  		  display: inline-block;
+  		  margin-left: 0;
+  		  vertical-align: top;
+  		  width: 100%;
+  		  
+    		@media screen and (min-width: 50em) {
+    		  margin-left: 3%;
+       		width: 63%;
+    		}
+    		
+    		article {
+      		margin-top: 2rem;
+      		
+       		@media screen and (min-width: 50em) {
+       		   &:nth-of-type(1) {
+       		     margin-top: 0;
+       		   }
+      		}     		
+    		}
+  		}
+  		
+  		blockquote,
+  		cite,
+  		p {
+				font: 200 1.6rem/2rem @font;
+				display: block;
+				margin: 0 auto;
+				text-align: left;
+				width: 100%;
+				
+				@media screen and (min-width: 50em) {
+					font: 200 1.7rem/2.1rem @font;
+				}
+			}
+	
+			cite {
+				color: @gray;
+				font: normal .9rem/1.4rem @font;
+				text-align: right;
+			}
+		}
+		
+  #contact {
+			div {
+				margin: auto;
+				text-align: left;
+				width: 100%;
+				
+				@media screen and (min-width: 50em) {
+					width: 80%;
+				}
+				
+				h4 {
+					text-align: left;
+				}
+				
+				textarea {
+					height: 20rem;
+					margin-bottom: 1rem;
+					width: 100%;
+				}
+				
+				label {
+					margin: 0 0 1rem 40%;
+					width: 16rem;
+					
+					input[type=text] {
+						margin: 1rem 0 0 40%;
+						width: 60%;
+					}
+					
+					@media screen and (min-width: 50em) {
+						margin: 0 0 1rem 60%;
+						
+						input[type=text] {
+							margin: 1rem 0 0 60%;
+							width: 40%;
+						}
+					}
+				}
+		  }
+	}
+}
