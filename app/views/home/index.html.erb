@@ -77,7 +77,7 @@
   		<cite>via <a href="https://twitter.com/smockled">Twitter</a></cite>
   	</article>
   	<article>
-  		<blockquote>Question: <%= @question.html_safe %></blockquote>
+  		<blockquote><a href="<%= @question["link"].html_safe %>">Question</a>: <%= @question["title"].html_safe %></blockquote>
   		<cite>via <a href="https://stackoverflow.com/users/1923134/smockle">Stack Overflow</a></cite>
   	</article>
   	<article>

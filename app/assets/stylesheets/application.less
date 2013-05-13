@@ -9,6 +9,9 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= depend_on fontello.css
+ *= depend_on home.less
+ *= depend_on errors.less
  */
 
 // Colors
@@ -16,7 +19,7 @@
 @black: #363f48;
 @beige: #eff2f4;
 @gray: #a7abb1;
-@text: #55606e;
+@text: #555C65;
 
 // Fonts
 @font: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -167,6 +170,10 @@ body {
 			h3 {
 				color: @gray;
 			}
+			
+			a:hover {
+  		  color: @text;
+  		}
 		}
 	
 		&:nth-of-type(3n+2) {
