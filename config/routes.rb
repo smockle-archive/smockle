@@ -1,8 +1,7 @@
 Smockle::Application.routes.draw do
 
   get "home/index"
-  match "/worka", :to => "home#worka"
-  match "/workb", :to => "home#workb"
+  match "/work", :to => "home#work"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

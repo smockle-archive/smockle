@@ -11,9 +11,6 @@ class HomeController < ApplicationController
     @image = HTTParty.get("https://api.instagram.com/v1/users/self/media/recent?access_token=" + Figaro.env.IGRAM_ACCESS_TOKEN)["data"].first["images"]["standard_resolution"]["url"]
   end
   
-  def worka
-  end
-  
-  def workb
+  def work
   end
 end

@@ -1,7 +1,7 @@
 SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, 
 {
   home: {
-    worka: function() {
+    work: function() {
       // Error pages only have one section, so disable scrolling.
       $(document).off("click", "nav a");
       
