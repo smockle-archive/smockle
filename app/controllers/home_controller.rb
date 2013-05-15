@@ -10,4 +10,10 @@ class HomeController < ApplicationController
     @question = HTTParty.get("https://api.stackexchange.com/2.1/me/questions?order=desc&sort=activity&site=stackoverflow&access_token=" + Figaro.env.SO_ACCESS_TOKEN + "&key=" + Figaro.env.SO_KEY)["items"].first
     @image = HTTParty.get("https://api.instagram.com/v1/users/self/media/recent?access_token=" + Figaro.env.IGRAM_ACCESS_TOKEN)["data"].first["images"]["standard_resolution"]["url"]
   end
+  
+  def worka
+  end
+  
+  def workb
+  end
 end

@@ -1,5 +1,5 @@
 Clicking work images should open full image and quotes.
-Only show Instagram photos tagged "#sfw".
+Only show Instagram photos not tagged "#p".
 Get commit and gist data from Github.
 Show submit button when message and from are populated.
 Send message when submit button is clicked.

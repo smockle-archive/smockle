@@ -1,6 +1,8 @@
 Smockle::Application.routes.draw do
 
   get "home/index"
+  match "/worka", :to => "home#worka"
+  match "/workb", :to => "home#workb"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -51,7 +53,7 @@ Smockle::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'home#index'
+  root :to => "home#index"
 
   # See how all your routes lay out with "rake routes"
 
@@ -60,7 +62,7 @@ Smockle::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
   
   # Custom error pages.
-  match '/404', :to => 'errors#not_found'
-  match '/422', :to => 'errors#server_error'
-  match '/500', :to => 'errors#server_error'
+  match "/404", :to => "errors#not_found"
+  match "/422", :to => "errors#server_error"
+  match "/500", :to => "errors#server_error"
 end
