@@ -23,44 +23,16 @@
 	</div>
 </section>
 
-<section id="work">
+<section id="projects">
 	<h3>Here are my recent projects:</h3>
+	<% @projects.each do |project| %>
 	<div>
-		<h4>Faculty Profiles</h4>
-		<a href="/work">
-			<div class="image"></div>
+		<h4><%= project.name %></h4>
+		<a href="/projects/<%= project.id %>">
+			<div class="image" data-id="<%= project.id %>" data-offset_x="<%= project.offset_x %>" data-offset_y="<%= project.offset_y %>"></div>
 		</a>
 	</div>
-	<div>
-		<h4>Educational Resources</h4>
-		<a href="/work">
-			<div class="image"></div>
-		</a>
-	</div>
-	<div>
-		<h4>Classroom Administration</h4>
-		<a href="/work">
-			<div class="image"></div>
-		</a>
-	</div>
-	<div>
-		<h4>News Release</h4>
-		<a href="/work">
-			<div class="image"></div>
-		</a>
-	</div>
-	<div>
-		<h4>Employee Directory</h4>
-		<a href="/work">
-			<div class="image"></div>
-		</a>
-	</div>
-	<div>
-		<h4>Smockle</h4>
-		<a href="/work">
-			<div class="image"></div>
-		</a>
-	</div>
+	<% end %>
 </section>
 
 <section id="feeds">

@@ -55,15 +55,29 @@ SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE,
           }
       }
       $(window).on("scroll", scroll);
+      
+      // Project images.
+      $(".image").each(function() {
+        var i = $(this).data("id"),
+            x = $(this).data("offset_x"),
+            y = $(this).data("offset_y");
+        $(this).css("background", "url(/assets/projects/" + i + ".png) no-repeat " + x + "% " + y + "%");
+      });
     },
     
-    work: function() {
+    projects: function() {
       // Error pages only have one section, so disable scrolling.
       $(document).off("click", "nav a");
       
       // Linkify navigation.
       $("nav a").each(function() {
         $(this).attr("href", "/" + $(this).attr("href"));
+      });
+      
+      // Project image.
+      $(".image").each(function() {
+        var i = $(this).data("id");
+        $(this).css("background", "url(/assets/projects/" + i + ".png) no-repeat 50% 0%");
       });
     }
   }
