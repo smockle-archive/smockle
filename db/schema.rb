@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20130516175222) do
     t.text     "description"
     t.integer  "offset_x"
     t.integer  "offset_y"
+    t.string   "link"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

@@ -5,3 +5,5 @@ Get commit and gist data from Github.
 Show submit button when message and from are populated.
 Send message when submit button is clicked.
 Include tips from the HTML5 Boilerplate.
+Gist Helpful Links.
+Gist Upgrading to Ruby 2.0.

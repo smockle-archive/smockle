@@ -1,13 +1,14 @@
 <section id="project">
   <h3><%= @project.name %></h3>
+  <h4><%= @project.client %></h4>
   <div>
   	<blockquote>"<%= @project.quote %>"</blockquote>
 	</div>
 	<div>
-  	<p><%= @project.description %></p>
+  	<p><%= @description[0] %></p>
 	</div>
 	<div>
-  	<p><%= @project.description %></p>
+  	<p><%= @description[1] %></p>
 	</div>
 	<div>
   	<div class="image" data-id="<%= @project.id %>"></div>

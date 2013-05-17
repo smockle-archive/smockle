@@ -7,6 +7,7 @@ class CreateProjects < ActiveRecord::Migration
       t.text :description
       t.integer :offset_x
       t.integer :offset_y
+      t.string :link
 
       t.timestamps
     end
