@@ -16,7 +16,7 @@ class HomeController < ApplicationController
     @project = Project.find(params[:id])
     @description = [ "", "" ]
     @project.description.split(".").each do |s|
-      @description[@description[0].length + s.length <= @project.description.length / 2 ? 0 : 1] += s + "."
+      @description[@description[0].length + s.length <= @project.description.length / 2 + 5 && @description[1].length == 0 ? 0 : 1] += s + "."
     end
   end
 end

@@ -1,5 +1,3 @@
-Add client to projects page.
-Add project descriptions to seeds.rb.
 Only show Instagram photos not tagged "#p".
 Get commit and gist data from Github.
 Show submit button when message and from are populated.
