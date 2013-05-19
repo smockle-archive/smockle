@@ -143,6 +143,7 @@ DEPENDENCIES
   httparty
   jquery-rails
   less-rails
+  mail
   memcachier
   pg
   rails (= 3.2.11)

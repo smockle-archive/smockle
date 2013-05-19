@@ -63,14 +63,16 @@
 	<h3>Contact me! Talk about a project, or just say hello.</h3>
 	<div>
 		<h4>Dear Smockle,</h4>
-		<textarea placeholder="Your message. You could describe a project you'd like to work on, or you could ask more about my work. I can't wait to hear from you!"></textarea>
+		<%= form_for @message, :url => { :action => "mail", :controller => "home" }, :method => :post do |f| %>
+		<%= f.text_area :content, :placeholder => "Your message. You could describe a project you'd like to work on, or you could ask more about my work. I can't wait to hear from you!" %>
 		<label>
 			Sincerely,<br>
-			<input type="text" placeholder="Your name."></input>
+			<%= f.text_field :name, :placeholder => "Your name." %>
 		</label>
 		<label>
-			<input type="text" placeholder="Your email."></input>
-			<a href="/mail" type="submit">Send</a>
+			<%= f.text_field :email, :placeholder => "Your email." %>
+			<a type="submit">Send</a>
 		</label>
+		<% end %>
 	</div>
 </section>

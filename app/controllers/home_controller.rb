@@ -5,6 +5,18 @@ class HomeController < ApplicationController
     @stackoverflow = Feed.stackoverflow
     @instagram = Feed.instagram
     @github = Feed.github
+    @message = Message.new
+  end
+  
+  def mail
+    @message = Message.new(params[:message])
+    if @message.valid?
+      Mailbox.contact(@message).deliver
+      flash[:notice] = "Message sent. Thank you for contacting Smockle!"
+    else
+      flash[:errors] = @message.errors
+    end
+    redirect_to root_url
   end
   
   def projects

@@ -67,6 +67,9 @@ SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE,
             y = $(this).data("offset_y");
         $(this).css("background", "url(/assets/projects/" + i + ".png) no-repeat " + x + "% " + y + "%");
       });
+	  
+	  // Submit link.
+	  $("#contact a[type=submit]").on("click", function() { $("#contact form").submit(); });
     },
     
     projects: function() {
