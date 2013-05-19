@@ -35,10 +35,8 @@ SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE,
       	var c = a - b > 0 ? a - b : 0;
 		$("nav a").removeClass("active");
 		$(e.target).addClass("active");
-		if (~h.indexOf("#contact"))
-		   $("#contact textarea").focus();
-		else
-		   $("#contact textarea").blur();
+		if (~h.indexOf("#contact")) $("#contact textarea").focus();
+		else $("#contact textarea").blur();
       	$("html, body").stop().animate({ scrollTop: c }, 600, function () {$(window).on("scroll", scroll);});
       }
       $(document).on("click", "nav a", click);
@@ -56,10 +54,8 @@ SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE,
 			lid = id;
 			$("nav a").removeClass("active");
 			$("nav a[href=#" + id + "]").addClass("active");
-			if (lid == "contact")
-			   $("#contact textarea").focus();
-			else
-			   $("#contact textarea").blur();
+			if (lid == "contact") $("#contact textarea").focus();
+			else $("#contact textarea").blur();
           }
       }
       $(window).on("scroll", scroll);
