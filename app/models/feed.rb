@@ -25,7 +25,12 @@ class Feed
                   }).select{|i| days.include? i["updated_at"].gsub(/T.*Z/, "")}     
       repos = events.each.map{|i| i["repo"]["name"]}
       mode = repos.mode.gsub(/smockle\//, "")
-      events.length.to_s + " commits to <a href=\"https://github.com/smockle/" + mode + "\">" + mode + "</a> and " + (repos.uniq.length - 1).to_s + " other repositories this week. " + gists.length.to_s + " new <a href=\"https://gist.github.com/smockle\">gists</a>."
+      output = events.length > 0 ? events.length.to_s + " commits to <a href=\"https://github.com/smockle/" + mode + "\">" + mode + "</a>" : "No commits"
+      output += repos.uniq.length - 1 > 0 ? " and " + (repos.uniq.length - 1).to_s + " other repositories" : ""
+      output += " this week. "
+      output += gists.length > 0 ? gists.length.to_s : "No"
+      output += " new <a href=\"https://gist.github.com/smockle\">gists</a>."
+      output
     end
   end
   
