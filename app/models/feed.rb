@@ -9,15 +9,23 @@ class Feed
     Rails.cache.fetch("github", :expires_in => 10.minutes) do
       time = Time.new
       days = (0..6).map{|i| (time - (60*60*24*i)).strftime("%Y-%m-%d")}
-      this_week = HTTParty.get("https://api.github.com/users/smockle/events/public",
+      events = HTTParty.get("https://api.github.com/users/smockle/events/public",
                   :query => {
                     :access_token => Figaro.env.GITHUB_ACCESS_TOKEN
                   },
                   :headers => {
                     "User-Agent" => "smockle.com"
                   }).select{|i| days.include? i["created_at"].gsub(/T.*Z/, "")}
-      repos = this_week.each.map{|i| i["repo"]["name"]}
-      this_week.length.to_s + " commits to " + repos.mode.gsub(/smockle\//, "") + " and " + (repos.uniq.length - 1).to_s + " other repositories. 3 new gists."
+      gists = HTTParty.get("https://api.github.com/users/smockle/gists",
+                  :query => {
+                    :access_token => Figaro.env.GITHUB_ACCESS_TOKEN
+                  },
+                  :headers => {
+                    "User-Agent" => "smockle.com"
+                  }).select{|i| days.include? i["updated_at"].gsub(/T.*Z/, "")}     
+      repos = events.each.map{|i| i["repo"]["name"]}
+      mode = repos.mode.gsub(/smockle\//, "")
+      events.length.to_s + " commits to <a href=\"https://github.com/smockle/" + mode + "\">" + mode + "</a> and " + (repos.uniq.length - 1).to_s + " other repositories this week. " + gists.length.to_s + " new <a href=\"https://gist.github.com/smockle\">gists</a>."
     end
   end
   
