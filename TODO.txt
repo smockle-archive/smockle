@@ -1,3 +1,2 @@
-Show submit button when message and from are populated.
 Send message when submit button is clicked.
 Include tips from the HTML5 Boilerplate.

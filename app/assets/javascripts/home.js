@@ -33,8 +33,12 @@ SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE,
       	var a = $(r)[0].offsetTop;
       	var b = $("header")[0].scrollHeight - 4;
       	var c = a - b > 0 ? a - b : 0;
-          $("nav a").removeClass("active");
-          $(e.target).addClass("active");
+		$("nav a").removeClass("active");
+		$(e.target).addClass("active");
+		if (~h.indexOf("#contact"))
+		   $("#contact textarea").focus();
+		else
+		   $("#contact textarea").blur();
       	$("html, body").stop().animate({ scrollTop: c }, 600, function () {$(window).on("scroll", scroll);});
       }
       $(document).on("click", "nav a", click);
@@ -49,9 +53,13 @@ SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE,
           c = c[c.length - 1];
           var id = c && c.length ? c[0].id : "";
           if (id !== lid) {
-       	   lid = id;
-       	   $("nav a").removeClass("active");
-       	   $("nav a[href=#" + id + "]").addClass("active");
+			lid = id;
+			$("nav a").removeClass("active");
+			$("nav a[href=#" + id + "]").addClass("active");
+			if (lid == "contact")
+			   $("#contact textarea").focus();
+			else
+			   $("#contact textarea").blur();
           }
       }
       $(window).on("scroll", scroll);
