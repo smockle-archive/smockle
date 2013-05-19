@@ -1,2 +1,4 @@
-Send message when submit button is clicked.
 Include tips from the HTML5 Boilerplate.
+Interceptor doesn't work.
+Validation doesn't work.
+Mail delivery doesn't work.
