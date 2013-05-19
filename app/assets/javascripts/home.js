@@ -69,7 +69,30 @@ SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE,
       });
 	  
 	  // Submit link.
-	  $("#contact a[type=submit]").on("click", function() { $("#contact form").submit(); });
+	  $("#contact a[type=submit]").on("click", function() {
+		  var form = $("#contact form");
+		  var values = form.serialize();
+      $.ajax({
+        url: form.attr("action"),
+        dataType: "json",
+        data: values,
+        success: function (data) {
+          $("#contact h4").text(data.message).css("text-align", "center");
+          $("#contact textarea").hide();
+          $("#contact label").hide();
+        },
+        error: function (data) {
+          var errors = jQuery.parseJSON(data.responseText);
+          console.log(jQuery.parseJSON(data.responseText));
+          if (errors.content != undefined)
+            $("#contact textarea").attr("placeholder", "Content " + errors.content + ".");
+          if (errors.name != undefined)
+            $("#contact label:nth-of-type(1) input").attr("placeholder", "Name " + errors.name + ".");
+          if (errors.email != undefined)
+            $("#contact label:nth-of-type(2) input").attr("placeholder", "Email " + errors.email + ".");
+        }
+      });
+	  });
     },
     
     projects: function() {

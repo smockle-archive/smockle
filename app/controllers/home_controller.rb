@@ -10,13 +10,14 @@ class HomeController < ApplicationController
   
   def mail
     @message = Message.new(params[:message])
-    if @message.valid?
-      Mailbox.contact(@message).deliver
-      flash[:notice] = "Message sent. Thank you for contacting Smockle!"
-    else
-      flash[:errors] = @message.errors
+    respond_to do |format|
+      if @message.valid?
+        Mailbox.contact(@message).deliver
+        format.json  { render :json => { :message => "Message sent. Thank you for contacting Smockle!"}, :status => :created }
+      else
+        format.json  { render :json => @message.errors, :status => :unprocessable_entity }
+      end
     end
-    redirect_to root_url
   end
   
   def projects
