@@ -39,21 +39,21 @@
 	<h3>Here are my feeds:</h3>
 	<div>
   	<article>
-  		<img src="<%= @image.html_safe %>">
+  		<img src="<%= @instagram.html_safe %>">
   		<cite>via <a href="https://instagram.com/claydm">Instagram</a></cite>
   	</article>
 	</div>
 	<div>
   	<article>
-  		<blockquote><%= @tweet.html_safe %></blockquote>
+  		<blockquote><%= @twitter.html_safe %></blockquote>
   		<cite>via <a href="https://twitter.com/smockled">Twitter</a></cite>
   	</article>
   	<article>
-  		<blockquote><a href="<%= @question["link"].html_safe %>">Question</a>: <%= @question["title"].html_safe %></blockquote>
+  		<blockquote><%= @stackoverflow.html_safe %></blockquote>
   		<cite>via <a href="https://stackoverflow.com/users/1923134/smockle">Stack Overflow</a></cite>
   	</article>
   	<article>
-  		<p>42 commits this week to smockle and 6 other repositories. 3 new gists.</p>
+  		<p><%= @github.html_safe %></p>
   		<cite>via <a href="https://github.com/smockle">Github</a></cite>
   	</article>
 	</div>

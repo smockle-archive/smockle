@@ -1,4 +1,4 @@
-Get commit and gist data from Github.
+Get gist data from Github.
 Show submit button when message and from are populated.
 Send message when submit button is clicked.
 Include tips from the HTML5 Boilerplate.
