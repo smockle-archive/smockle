@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Smockle</title>
+  <meta name="description" content="Web developer. Web designer. Coffee aficionado. Arts patron. Avid hammocker. I build the Internet.">
+  <meta name="viewport" content="width=device-width">
+  
   <link href="//fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -19,9 +23,21 @@
 			<a href="#contact">CONTACT</a>
 		</nav>
 	</header>
-<%= yield %>
-	<footer>
+
+  <%= yield %>
+	
+  <footer>
 		<p>Copyright &copy; <span class="year">2013</span> Clay Miller. All rights reserved.</p>
 	</footer>
+  
+  <% if Rails.env.production? %>
+  <!-- Google Analytics. -->
+  <script>
+      var _gaq=[['_setAccount','UA-37140610-1'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src='//www.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  <% end %>
 </body>
 </html>
