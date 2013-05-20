@@ -1,2 +1,3 @@
 Look into MailChimp.
-Upgrade to Rails 4.
+Upgrade to Rails 4 (http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html).
+Set up a staging environment (https://devcenter.heroku.com/articles/multiple-environments).
