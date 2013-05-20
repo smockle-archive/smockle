@@ -1,2 +1,4 @@
 Include tips from the HTML5 Boilerplate.
 Look into MailChimp.
+Add a favicon.
+Upgrade to Rails 4.
