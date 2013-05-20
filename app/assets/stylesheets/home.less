@@ -15,23 +15,29 @@ body {
 		div {
 			box-sizing: border-box;
 			display: inline-block;
-			margin-top: 1rem;
 			position: relative;
 			text-align: left;
 			vertical-align: top;
 			width: 100%;
 			z-index: 1;
 			
+      &:nth-of-type(n+2) {
+      	margin-top: 1rem;
+      }
+      
 			@media screen and (min-width: 50em) {
-				margin-top: 0;
 				margin-left: 2%;
 				width: 31%;
 				
+        &:nth-of-type(n+1) {
+        	margin-top: 0;
+        }
+        
 				&:nth-of-type(3n+1) {
 					margin-left: 0;
 				}
 			}
-			
+      
 			h4 {
   			margin: 0;
 			}
@@ -46,22 +52,28 @@ body {
 		div {
 			box-sizing: border-box;
 			display: inline-block;
-			margin-top: 1rem;
 			position: relative;
 			text-align: left;
 			vertical-align: top;
 			width: 100%;
 			z-index: 1;
 			
+      &:nth-of-type(n+2) {
+      	margin-top: 1rem;
+      }
+      
 			&:nth-of-type(n+4) {
 				display: none;
 			}
 			
 			@media screen and (min-width: 50em) {
-				margin-top: 0;
 				margin-left: 1.4%;
 				width: 32%;
 				
+        &:nth-of-type(n+1) {
+        	margin-top: 0;
+        }
+        
 				&:nth-of-type(3n+1) {
 					margin-left: 0;
 				}
