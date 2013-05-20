@@ -15,11 +15,11 @@
  */
 
 // Colors
-@red: #c5767c;
-@black: #363f48;
+@red: #c3363c;
+@black: #282828;
 @beige: #eff2f4;
-@gray: #a7abb1;
-@text: #555C65;
+@gray: #a7a7a7;
+@text: #5b5b5b;
 
 // Fonts
 @font: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -43,16 +43,20 @@ body {
 	margin: auto;
 	
 	a {
-  	color: @gray;
+  	color: @red;
 		text-decoration: none;
-	}
-	
-	a:hover {
-  	color: @gray;
+    
+    &:hover {
+  	  color: @text;
+    }
 	}
 
 	h1 a {
   	color: white;
+    
+    &:hover {
+      color: @gray;
+    }
 	}
 
 	h2 {
