@@ -9,10 +9,14 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= depend_on normalize.css
  *= depend_on fontello.css
  *= depend_on home.less
  *= depend_on errors.less
  */
+
+// Normalize
+@import "normalize.css";
 
 // Colors
 @red: #c3363c;
@@ -34,6 +38,11 @@
 ::-moz-selection {
 	color: white;
 	background: @red;
+}
+
+// HTML
+html {
+  background-color: @black;
 }
 
 body {
