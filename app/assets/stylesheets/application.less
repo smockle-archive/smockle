@@ -94,27 +94,37 @@ body {
 	}
 	
   i {
-					display: block;
-					font-size: 9rem;
-					text-align: center;
-					
-					@media screen and (min-width: 75em) {
-						font-size: 12rem;
-					}
-				}
+		display: block;
+		font-size: 9rem;
+		text-align: center;
+		
+		@media screen and (min-width: 75em) {
+			font-size: 12rem;
+		}
+	}
 	
 	input, select, textarea {
 		border: 1px solid @black;
 		box-sizing: border-box;
-		font: .9rem/1.6rem @font;
+		font: .9rem/1rem @font;
 		height: 2rem;
 		padding: 1rem;
 	}
+  
+  /* Firefox Hack
+   * Placeholders have a height in Firefox,
+   * so we must compensate.
+   */
+  textarea, input, x:-moz-any-link {
+    height: 1rem;
+    padding: .5rem;
+  }
+  
 	input:focus, select:focus, textarea:focus {
 		outline: 2px solid @red;
 	}
 	
-	p {
+	p, textarea {
 		font: .9rem/1.6rem @font;
 	}
 
