@@ -6,7 +6,7 @@ class Message
   attr_accessor :name, :email, :content
   
   validates_presence_of :name, :content
-  validates_format_of :email, :with => /^[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}$/i
+  validates_format_of :email, :with => /\A[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}\z/i
   
   def initialize(attributes = {})
     attributes.each do |name, value|

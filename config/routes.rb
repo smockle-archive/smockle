@@ -1,8 +1,8 @@
 Smockle::Application.routes.draw do
 
   get "home/index"
-  match "/mail", :to => "home#mail"
-  match "/projects(/:id)", :to => "home#projects"
+  post "/mail" => "home#mail"
+  get "/projects(/:id)" => "home#projects"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -62,7 +62,7 @@ Smockle::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
   
   # Custom error pages.
-  match "/404", :to => "errors#not_found"
-  match "/422", :to => "errors#server_error"
-  match "/500", :to => "errors#server_error"
+  get "/404" => "errors#not_found"
+  get "/422" => "errors#server_error"
+  get "/500" => "errors#server_error"
 end
