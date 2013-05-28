@@ -76,6 +76,7 @@ SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE,
         url: form.attr("action"),
         dataType: "json",
         data: values,
+        type: "POST",
         success: function (data) {
           $("#contact h4").text(data.message).css("text-align", "center");
           $("#contact textarea").hide();
