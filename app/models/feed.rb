@@ -36,7 +36,8 @@ class Feed
       output += repos.uniq.length - 1 > 0 ? " and " + (repos.uniq.length - 1).to_s + " other repositories" : ""
       output += " this week. "
       output += gists.length > 0 ? gists.length.to_s : "No"
-      output += " new <a href=\"https://gist.github.com/smockle\">gists</a>."
+      output += " new <a href=\"https://gist.github.com/smockle\">"
+      output += gists.length == 1 ? "gist</a>." : "gists</a>."
       output
     end
   end
