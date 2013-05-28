@@ -1,2 +1,4 @@
 Look into MailChimp.
 Upgrade to Rails 4 (http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html).
+Add notifications when the main page has 500 errors.
+Make smaller images.
