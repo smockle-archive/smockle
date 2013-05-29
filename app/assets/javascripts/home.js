@@ -62,10 +62,8 @@ SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE,
       
       // Project images.
       $(".image").each(function() {
-        var i = $(this).data("id"),
-            x = $(this).data("offset_x"),
-            y = $(this).data("offset_y");
-        $(this).css("background", "url(/assets/projects/" + i + ".png) no-repeat " + x + "% " + y + "%");
+        var i = $(this).data("id");
+        $(this).css("background", "url(/assets/projects/thumbnails/" + i + ".png) no-repeat center center");
       });
 	  
 	  // Submit link.
