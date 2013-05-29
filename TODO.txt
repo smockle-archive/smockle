@@ -1,6 +1,7 @@
 Look into MailChimp.
 Add notifications when the main page has 500 errors.
 Remove offsets from projects model.
+Crop project images.
 Check Google Analytics.
 Add unit tests.
 Add integration tests.
