@@ -5,8 +5,6 @@ class CreateProjects < ActiveRecord::Migration
       t.string :client
       t.string :quote
       t.text :description
-      t.integer :offset_x
-      t.integer :offset_y
       t.string :link
 
       t.timestamps

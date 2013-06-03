@@ -1,8 +1,11 @@
-Look into MailChimp.
 Add notifications when the main page has 500 errors.
-Remove offsets from projects model.
+Test contact form validation.
+Test sending mail.
+Test page load time.
+Test width on mobile.
 Check Google Analytics.
-Add unit tests.
-Add integration tests.
 Look into New Relic.
+Look into MailChimp.
 Explicitly state the license for each of my projects.
+Convert LESS to SASS.
+Check SASS vs LESS performance.
