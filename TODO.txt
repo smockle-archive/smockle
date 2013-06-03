@@ -7,5 +7,3 @@ Check Google Analytics.
 Look into New Relic.
 Look into MailChimp.
 Explicitly state the license for each of my projects.
-Convert LESS to SASS.
-Check SASS vs LESS performance.

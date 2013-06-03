@@ -47,7 +47,7 @@ class Feed
       HTTParty.get("https://api.instagram.com/v1/users/self/media/recent",
       :query => {
         :access_token => Figaro.env.INSTAGRAM_ACCESS_TOKEN
-      })["data"].reject{|i| i["tags"].include? "p"}.first["images"]["standard_resolution"]["url"]
+      })["data"].reject{|i| i["tags"].include? "p"}.first["images"]["low_resolution"]["url"]
     end
   end
 
