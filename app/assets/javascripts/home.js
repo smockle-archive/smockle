@@ -112,7 +112,7 @@ SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE,
       // Project image.
       $(".image").each(function() {
         var i = $(this).data("id");
-        $(this).css("background", "url(/assets/projects/" + i + ".png) no-repeat 50% 0%");
+        $(this).css("background", "url(/assets/projects/" + i + ".png) no-repeat center center");
       });
     }
   }
