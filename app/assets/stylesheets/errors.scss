@@ -4,8 +4,8 @@
 
 body {
   #errors {
-    background-color: @beige;
-		color: @black;
+    background-color: $beige;
+		color: $black;
 		margin-top: 2rem;
 		text-align: left;
 
@@ -14,7 +14,7 @@ body {
 		}
 		
 		p {
-  		font: 200 1.6rem/2rem @font;
+  		font: 200 1.6rem/2rem $font;
   		margin: 1.6rem auto;
   		width: 20rem;
 		}

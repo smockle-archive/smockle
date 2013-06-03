@@ -10,8 +10,6 @@ gem "rails", "~> 4.0.0.rc1"
 gem "pg", "~> 0.15.1"
 
 # Assets
-gem "therubyracer", "~> 0.11.4"
-gem "less-rails", "~> 2.3.3"
 gem "sass-rails", "~> 4.0.0.rc1"
 gem "coffee-rails", "~> 4.0.0"
 gem "uglifier", "~> 2.1.1"
