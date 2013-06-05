@@ -1,6 +1,4 @@
 Add notifications when the main page has 500 errors.
-Test contact form validation.
-Test sending mail.
 Test page load time.
 Test width on mobile.
 Check Google Analytics.
