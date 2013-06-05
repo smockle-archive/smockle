@@ -4,6 +4,6 @@ class Mailbox < ActionMailer::Base
   
   def contact(message)
     @message = message
-    mail(:reply_to => @message.email, :subjet => "New message from Smockle.")
+    mail(:reply_to => @message.email, :subject => "New message from Smockle.")
   end
 end

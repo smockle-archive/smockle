@@ -1,0 +1,6 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: "Smockle"
+  email: "webmaster@smockle.com"
+  content: "Lorem ipsum isom dolor sit amet."
