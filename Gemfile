@@ -27,3 +27,6 @@ gem "dalli", "~> 2.6.4"
 
 # Mailings
 gem "mail", "~> 2.5.4"
+
+# Metrics
+gem "newrelic_rpm"

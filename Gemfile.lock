@@ -61,6 +61,7 @@ GEM
     multi_json (1.7.5)
     multi_xml (0.5.3)
     multipart-post (1.2.0)
+    newrelic_rpm (3.6.3.106)
     pg (0.15.1)
     polyglot (0.3.3)
     rack (1.5.2)
@@ -128,6 +129,7 @@ DEPENDENCIES
   jquery-rails (~> 2.2.1)
   mail (~> 2.5.4)
   memcachier (~> 0.0.2)
+  newrelic_rpm
   pg (~> 0.15.1)
   rails (~> 4.0.0.rc1)
   sass-rails (~> 4.0.0.rc1)
