@@ -9,7 +9,7 @@ class HomeController < ApplicationController
   end
   
   def mail
-    @message = Message.new(params[:message])
+    @message = Message.new(params.require(:message).permit(:name, :email, :content))
     respond_to do |format|
       if @message.valid?
         Mailbox.contact(@message).deliver
