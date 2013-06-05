@@ -5,13 +5,9 @@ one:
   client: MyString
   quote: MyString
   description: MyText
-  offset-x: 1
-  offset-y: 1
 
 two:
   name: MyString
   client: MyString
   quote: MyString
   description: MyText
-  offset-x: 1
-  offset-y: 1

@@ -1,6 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  name: "Smockle"
+good:
+  name: "Smockle Test"
   email: "webmaster@smockle.com"
   content: "Lorem ipsum isom dolor sit amet."
+
+bad:
+  name: ""
+  email: ""
+  content: ""
