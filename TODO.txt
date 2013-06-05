@@ -1,7 +1,1 @@
-Add notifications when the main page has 500 errors.
-Test page load time.
-Test width on mobile.
-Check Google Analytics.
-Look into New Relic.
-Look into MailChimp.
 Explicitly state the license for each of my projects.
