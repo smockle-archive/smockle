@@ -25,6 +25,9 @@ gem "figaro", "~> 0.6.4"
 gem "memcachier", "~> 0.0.2"
 gem "dalli", "~> 2.6.4"
 
+# Deployment
+gem "rails_12factor", "~> 0.0.2"
+
 # Mailings
 gem "mail", "~> 2.5.4"
 
