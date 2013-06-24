@@ -24,7 +24,7 @@ class Feed
                     "User-Agent" => "smockle.com"
                   }).select{|i| days.include? i["updated_at"].gsub(/T.*Z/, "")}     
       repos = events.each.map{|i| i["repo"]["name"]}
-      mode = repos.mode.gsub(/smockle\//, "")
+      mode = events.length > 0 ? repos.mode.gsub(/smockle\//, "") : ""
       output = case
       when events.length == 1
         events.length.to_s + " commit"
@@ -32,7 +32,7 @@ class Feed
         events.length.to_s + " commits"
       else ""
       end
-      output += events.length > 0 ? " to <a href=\"https://github.com/smockle/" + mode + "\">" + mode + "</a>" : "No commits"
+      output += events.length > 0 ? " to <a href=\"https://github.com/smockle/" + mode + "\">" + mode + "</a>" : "No public commits"
       output += repos.uniq.length - 1 > 0 ? " and " + (repos.uniq.length - 1).to_s + " other repositories" : ""
       output += " this week. "
       output += gists.length > 0 ? gists.length.to_s : "No"
