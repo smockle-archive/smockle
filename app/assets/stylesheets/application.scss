@@ -9,14 +9,14 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= depend_on normalize.css
+ *= depend_on normalize.scss
  *= depend_on fontello.scss
  *= depend_on home.scss
  *= depend_on errors.scss
  */
 
 // Normalize
-@import "normalize.css";
+@import "normalize";
 
 // Colors
 $red: #c3363c;
