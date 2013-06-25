@@ -10,7 +10,7 @@
  *
  *= require_self
  *= depend_on normalize.css
- *= depend_on fontello.css
+ *= depend_on fontello.scss
  *= depend_on home.scss
  *= depend_on errors.scss
  */
@@ -27,7 +27,7 @@ $text: #5b5b5b;
 
 // Fonts
 $font: "Helvetica Neue", Helvetica, Arial, sans-serif;
-@import "fontello.css";
+@import "fontello";
 
 // Selection
 ::selection,
