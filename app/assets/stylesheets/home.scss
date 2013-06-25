@@ -328,7 +328,13 @@ body {
           border: 1px solid $gray;
           height: 40rem;
           width: 100%;
-        }	
+          
+          @for $n from 1 through 6 {
+            &.i#{$n} {
+              background: image-url("projects/" + $n + ".png") no-repeat center center;
+            }
+          }
+        }
 			}
 			
 			p {
