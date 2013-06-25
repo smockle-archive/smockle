@@ -135,7 +135,7 @@ body {
 	}
   @for $n from 1 through 6 {
     #projects div:nth-of-type(#{$n}) .image {
-      background: image-url("/assets/projects/thumbnails/" + $n + ".png") no-repeat center center;
+      background: image-url("projects/thumbnails/" + $n + ".png") no-repeat center center;
     }
   }
   	
