@@ -59,12 +59,6 @@ SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE,
           }
       }
       $(window).on("scroll", scroll);
-      
-      // Project images.
-      // $(".image").each(function() {
-      //   var i = $(this).data("id");
-      //   $(this).css("background", "url(/assets/projects/thumbnails/" + i + ".png) no-repeat center center");
-      // });
 	  
 	  // Submit link.
 	  $("#contact a[type=submit]").on("click", function() {
@@ -108,12 +102,6 @@ SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE,
       $("nav a").each(function() {
         $(this).attr("href", "/" + $(this).attr("href"));
       });
-      
-      // Project image.
-      // $(".image").each(function() {
-      //   var i = $(this).data("id");
-      //   $(this).css("background", "url(/assets/projects/" + i + ".png) no-repeat center center");
-      // });
     }
   }
 });
