@@ -23,8 +23,8 @@ Smockle::Application.configure do
   # Compress JavaScripts and CSS
   config.assets.compress = true
 
-  # Fall back to assets pipeline if a precompiled asset is missed 
-  config.assets.compile = true
+  # Fall back to assets pipeline if a precompiled asset is missed
+  config.assets.compile = false
 
   # Generate digests for assets URLs
   config.assets.digest = true
