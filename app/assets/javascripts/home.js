@@ -61,10 +61,10 @@ SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE,
       $(window).on("scroll", scroll);
       
       // Project images.
-      $(".image").each(function() {
-        var i = $(this).data("id");
-        $(this).css("background", "url(/assets/projects/thumbnails/" + i + ".png) no-repeat center center");
-      });
+      // $(".image").each(function() {
+      //   var i = $(this).data("id");
+      //   $(this).css("background", "url(/assets/projects/thumbnails/" + i + ".png) no-repeat center center");
+      // });
 	  
 	  // Submit link.
 	  $("#contact a[type=submit]").on("click", function() {
@@ -110,10 +110,10 @@ SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE,
       });
       
       // Project image.
-      $(".image").each(function() {
-        var i = $(this).data("id");
-        $(this).css("background", "url(/assets/projects/" + i + ".png) no-repeat center center");
-      });
+      // $(".image").each(function() {
+      //   var i = $(this).data("id");
+      //   $(this).css("background", "url(/assets/projects/" + i + ".png) no-repeat center center");
+      // });
     }
   }
 });

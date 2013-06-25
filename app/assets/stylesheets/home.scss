@@ -112,7 +112,7 @@ body {
 					position: absolute;
 					top: 50%;
 				}
-				
+        
 				.image {
 					border: 1px solid $gray;
 					height: 10rem;
@@ -121,7 +121,7 @@ body {
 				}
 			}
 		}
-		
+    
 		div .image {
 			display: block;
 			height: auto;
@@ -133,7 +133,12 @@ body {
 			width: auto;
 		}
 	}
-		
+  @for $n from 1 through 6 {
+    #projects div:nth-of-type(#{$n}) .image {
+      background: image-url("/assets/projects/thumbnails/" + $n + ".png") no-repeat center center;
+    }
+  }
+  	
   #feeds {
 		div:nth-of-type(1) {
 		  display: inline-block;
