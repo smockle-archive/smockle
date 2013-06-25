@@ -7,8 +7,7 @@
  * Copyright © 2013 Clay Miller (clay@smockle.com)
  */
 
-SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, 
-{
+SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
   home: {
     index: function() {
       // De-linkify logo.
@@ -33,65 +32,65 @@ SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE,
       	var a = $(r)[0].offsetTop;
       	var b = $("header")[0].scrollHeight - 4;
       	var c = a - b > 0 ? a - b : 0;
-		$("nav a").removeClass("active");
-		$(e.target).addClass("active");
-		if (~h.indexOf("#contact")) $("#contact textarea").focus();
-		else $("#contact textarea").blur();
+		    $("nav a").removeClass("active");
+		    $(e.target).addClass("active");
+		    if (~h.indexOf("#contact")) $("#contact textarea").focus();
+		    else $("#contact textarea").blur();
       	$("html, body").stop().animate({ scrollTop: c }, 600, function () {$(window).on("scroll", scroll);});
       }
       $(document).on("click", "nav a", click);
             
       // Update section on scroll.
       function scroll() {
-          var b = $("header")[0].scrollHeight;
-          var t = $(this).scrollTop() + b;
-          var c = sections.map(function() {
-            if ($(this).offset().top < t) return this;
-          });
-          c = c[c.length - 1];
-          var id = c && c.length ? c[0].id : "";
-          if (id !== lid) {
-			lid = id;
-			$("nav a").removeClass("active");
-			$("nav a[href=#" + id + "]").addClass("active");
-			if (lid == "contact") $("#contact textarea").focus();
-			else $("#contact textarea").blur();
-          }
+        var b = $("header")[0].scrollHeight;
+        var t = $(this).scrollTop() + b;
+        var c = sections.map(function() {
+          if ($(this).offset().top < t) return this;
+        });
+        c = c[c.length - 1];
+        var id = c && c.length ? c[0].id : "";
+        if (id !== lid) {
+			    lid = id;
+			    $("nav a").removeClass("active");
+			    $("nav a[href=#" + id + "]").addClass("active");
+			    if (lid == "contact") $("#contact textarea").focus();
+			    else $("#contact textarea").blur();
+        }
       }
       $(window).on("scroll", scroll);
 	  
-	  // Submit link.
-	  $("#contact a[type=submit]").on("click", function() {
-		  var form = $("#contact form");
-		  var values = form.serialize();
-      $.ajax({
-        url: form.attr("action"),
-        dataType: "json",
-        data: values,
-        type: "POST",
-        success: function (data) {
-          $("#contact h4").text(data.message).css("text-align", "center");
-          $("#contact textarea").hide();
-          $("#contact label").hide();
-        },
-        error: function (data) {
-          var errors = jQuery.parseJSON(data.responseText);
-          console.log(jQuery.parseJSON(data.responseText));
-          if (errors.content != undefined)
-            $("#contact textarea").attr("placeholder", "Content " + errors.content + ".");
-          if (errors.name != undefined)
-            $("#contact label:nth-of-type(1) input").attr("placeholder", "Name " + errors.name + ".");
-          if (errors.email != undefined)
-            $("#contact label:nth-of-type(2) input").attr("placeholder", "Email " + errors.email + ".");
-        }
-      });
-	  });
+	    // Submit link.
+	    $("#contact a[type=submit]").on("click", function() {
+		    var form = $("#contact form");
+		    var values = form.serialize();
+        $.ajax({
+          url: form.attr("action"),
+          dataType: "json",
+          data: values,
+          type: "POST",
+          success: function (data) {
+            $("#contact h4").text(data.message).css("text-align", "center");
+            $("#contact textarea").hide();
+            $("#contact label").hide();
+          },
+          error: function (data) {
+            var errors = jQuery.parseJSON(data.responseText);
+            console.log(jQuery.parseJSON(data.responseText));
+            if (errors.content != undefined)
+              $("#contact textarea").attr("placeholder", "Content " + errors.content + ".");
+            if (errors.name != undefined)
+              $("#contact label:nth-of-type(1) input").attr("placeholder", "Name " + errors.name + ".");
+            if (errors.email != undefined)
+              $("#contact label:nth-of-type(2) input").attr("placeholder", "Email " + errors.email + ".");
+          }
+        });
+	    });
     
-    // Safari Hack
-    // Safari rounds in a very special way,
-    // so we must compensate.
-    if (/Constructor/.test(window.HTMLElement))
-      $("#contact a[type=submit]").css("margin", "-2.34rem 0");
+      // Safari Hack
+      // Safari rounds in a very special way,
+      // so we must compensate.
+      if (/Constructor/.test(window.HTMLElement))
+        $("#contact a[type=submit]").css("margin", "-2.34rem 0");
     },
     
     projects: function() {
