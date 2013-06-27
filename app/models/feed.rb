@@ -33,7 +33,13 @@ class Feed
       else ""
       end
       output += events.length > 0 ? " to <a href=\"https://github.com/smockle/" + mode + "\">" + mode + "</a>" : "No public commits"
-      output += repos.uniq.length - 1 > 0 ? " and " + (repos.uniq.length - 1).to_s + " other repositories" : ""
+      output += case 
+      when repos.uniq.length > 2
+        " and " + (repos.uniq.length - 1).to_s + " other repositories"
+      when repos.uniq.length == 2
+        " and " + (repos.uniq.length - 1).to_s + " other repository"
+      else ""
+      end
       output += " this week. "
       output += gists.length > 0 ? gists.length.to_s : "No"
       output += " new <a href=\"https://gist.github.com/smockle\">"
