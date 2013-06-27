@@ -44,8 +44,6 @@ GEM
     figaro (0.6.4)
       bundler (~> 1.0)
       rails (>= 3, < 5)
-    gallop (0.1.0)
-      unicorn
     hike (1.2.3)
     httparty (0.11.0)
       multi_json (~> 1.0)
@@ -129,6 +127,9 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    unicorn-rails (1.0.1)
+      rack
+      unicorn
 
 PLATFORMS
   ruby
@@ -137,7 +138,6 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   dalli (~> 2.6.4)
   figaro (~> 0.6.4)
-  gallop (~> 0.1.0)
   httparty (~> 0.11.0)
   jquery-rails (~> 2.2.1)
   mail (~> 2.5.4)
@@ -151,3 +151,4 @@ DEPENDENCIES
   twitter-text (~> 1.6.1)
   uglifier (~> 2.1.1)
   unicorn (~> 4.6.3)
+  unicorn-rails (~> 1.0.1)
