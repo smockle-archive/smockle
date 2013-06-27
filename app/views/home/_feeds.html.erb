@@ -1,0 +1,21 @@
+<h3>Here are my feeds:</h3>
+<div>
+<article>
+    <img src="<%= @instagram.html_safe %>">
+    <cite>via <a href="https://instagram.com/claydm">Instagram</a></cite>
+</article>
+</div>
+<div>
+<article>
+    <blockquote><%= @twitter.html_safe %></blockquote>
+    <cite>via <a href="https://twitter.com/smockled">Twitter</a></cite>
+</article>
+<article>
+    <blockquote><%= @stackoverflow.html_safe %></blockquote>
+    <cite>via <a href="https://stackoverflow.com/users/1923134/smockle">Stack Overflow</a></cite>
+</article>
+<article>
+    <p><%= @github.html_safe %></p>
+    <cite>via <a href="https://github.com/smockle">Github</a></cite>
+</article>
+</div>
