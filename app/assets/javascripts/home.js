@@ -4,7 +4,7 @@
 
 /* Scroll
  * When included with a project, scrolling by section is automatically enabled.
- * Copyright © 2013 Clay Miller (clay@smockle.com)
+ * Copyright © 2013 Clay Miller (clay@smockle.com) 
  */
 
 SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
