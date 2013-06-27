@@ -36,4 +36,4 @@ gem "newrelic_rpm"
 
 # Server
 gem "unicorn", "~> 4.6.3"
-gem "gallop", "~> 0.1.0"
+gem "unicorn-rails", "~> 1.0.1"
