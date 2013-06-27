@@ -1,11 +1,15 @@
 class HomeController < ApplicationController  
   def index
     @projects = Project.all
+    @message = Message.new
+  end
+  
+  def feeds
     @twitter = Feed.twitter
     @stackoverflow = Feed.stackoverflow
     @instagram = Feed.instagram
     @github = Feed.github
-    @message = Message.new
+    render :partial => "feeds"
   end
   
   def mail

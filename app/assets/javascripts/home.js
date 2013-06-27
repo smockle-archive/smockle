@@ -10,6 +10,14 @@
 SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
   home: {
     index: function() {
+      // Load feeds.
+      $.ajax({
+        url: "/home/feeds",
+        success: function(data) {
+           $("section#feeds").html(data);
+        }
+      });
+      
       // De-linkify logo.
       $("h1").html($("h1 a").text());
       
