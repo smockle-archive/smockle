@@ -36,4 +36,4 @@ gem "newrelic_rpm"
 
 # Server
 gem "unicorn", "~> 4.6.3"
-gem "hooves", "~> 0.7", require: "hooves/default"
+gem "gallop", "~> 0.1.0"
