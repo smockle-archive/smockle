@@ -1,0 +1,30 @@
+/* PASTRY */
+
+Smockle
+http://www.smockle.com
+Smockle is the main website for Smockle, LLC.
+
+/* BAKER */
+
+Clay Miller
+http://www.smockle.com
+@smockled
+Auburn, United States
+
+/* INGREDIENTS */
+
+Dalli
+Figaro
+Github
+Heroku
+HTTParty
+Memcachier
+New Relic
+Papertrailapp
+Postgres
+Ruby on Rails
+Unicorn
+
+/* INSTRUCTIONS */
+
+Preheat Heroku to 450. Measure three cups of Rails code into a large glass Github repo. Slowly add Dalli, Figaro, HTTParty, Memcachier, Postgres while stirring constantly. Push code to Heroku. Check after 12-15 minutes using New Relic and Papertrailapp. Serve warm with Unicorn.
