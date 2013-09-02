@@ -1,0 +1,102 @@
+//
+// BASIC TAGS
+//
+
+html {
+  background-color: $black;
+}
+
+body {
+  background-color: $black;
+  color: white;
+  font-family: $font;
+  margin: auto;
+}
+
+a {
+  color: $red;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $text;
+}
+
+h1 {
+  display: block;
+  font: 2.2rem "Pacifico", serif;
+  letter-spacing: .1rem;
+}
+
+h2 {
+  font: 200 2.4rem/3.4rem $font;
+  margin: 0 0 1rem 0;
+}
+	
+h3 {
+  font: 200 1.6rem $font;
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+	
+h4 {
+  font: 200 1.2rem $font;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+	
+i {
+  display: block;
+  font-size: 9rem;
+  text-align: center;
+}
+	
+input, select, textarea {
+  border: 1px solid $black;
+  box-sizing: border-box;
+  font: .9rem/1rem $font;
+  height: 2rem;
+  padding: 1rem;
+}
+  
+/* HACK: Placeholders have a height in Firefox, so we must compensate. */
+textarea, input, x:-moz-any-link {
+  height: 1rem;
+  padding: .5rem;
+}
+  
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid $red;
+}
+	
+p, textarea {
+  font: .9rem/1.6rem $font;
+}
+
+p {
+  margin: 0 0 1rem 0;
+}
+
+//
+// MEDIA QUERIES
+//
+
+@media screen and (min-width: 50em) {
+  h1 {
+    display: inline-block;
+  }
+  
+  h2 {
+    font: 200 3.5rem/4.9rem $font; 
+  }
+  
+  h3 {
+    font: 200 1.8rem $font;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  i {
+    font-size: 12rem;
+  }
+}

@@ -1,0 +1,38 @@
+//
+// .FEED
+//
+
+.feed {
+  margin-top: 2rem;
+}
+
+.feed-content {
+  display: block;
+  font: 200 1.6rem/2rem $font;
+  margin: 0 auto;
+  text-align: left;
+  width: 100%;
+}
+
+.feed-source {
+  color: $gray;
+  display: block;
+  font: normal .9rem/1.4rem $font;
+  margin: 0 auto;
+  text-align: right;
+  width: 100%;
+}
+
+//
+// MEDIA QUERIES
+//
+
+@media screen and (min-width: 50em) {
+  .feed:nth-of-type(1) {
+    margin-top: 0;
+  }
+  
+  .feed-content {
+    font: 200 1.7rem/2.1rem $font;
+  }
+}

@@ -2,21 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  #errors {
-    background-color: $beige;
-		color: $black;
-		margin-top: 2rem;
-		text-align: left;
+#errors {
+  background-color: $beige;
+  color: $black;
+  margin-top: 2rem;
+  text-align: left;
 
-		@media screen and (min-width: 50em) {
-			margin-top: 5rem;
-		}
-		
-		p {
-  		font: 200 1.6rem/2rem $font;
-  		margin: 1.6rem auto;
-  		width: 20rem;
-		}
+  @media screen and (min-width: 50em) {
+      margin-top: 5rem;
+  }
+      
+  p {
+    font: 200 1.6rem/2rem $font;
+    margin: 1.6rem auto;
+    width: 20rem;
   }
 }

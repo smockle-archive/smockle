@@ -1,0 +1,44 @@
+//
+// .THUMBNAIL
+//
+
+.thumbnail {
+}
+
+.thumbnail-title {
+}
+
+.thumbnail-body {
+  display: block;
+  margin: 0 10%;
+  width: 80%;
+}
+
+.thumbnail-body:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.thumbnail-body:hover:before {
+  color: white;
+  content: "\1f50d";
+  font-size: 3rem;
+  font-family: "fontello";
+  left: 50%;
+  margin: -.8rem 0 0 -1.5rem;
+  opacity: .5;
+  position: absolute;
+  top: 50%;
+}
+
+.thumbnail-image {
+  border: 1px solid $gray;
+  display: block;
+  height: 10rem;
+  margin: 0 auto;
+  max-height: 24rem;
+  max-width: 100%;
+  position: relative;
+  vertical-align: bottom;
+  width: 100%;
+  z-index: -1;
+}

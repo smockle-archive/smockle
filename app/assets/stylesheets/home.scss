@@ -2,360 +2,111 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  #intro {
-		margin-top: 2rem;
-		
-		@media screen and (min-width: 50em) {
-			margin-top: 5rem;
-		}
-  }
+//
+// #INTRO
+//
+
+#intro {
+  margin-top: 2rem;
+}
+
+//
+// #ABOUT
+//
   
-  #about {
-		div {
-			box-sizing: border-box;
-			display: inline-block;
-			position: relative;
-			text-align: left;
-			vertical-align: top;
-			width: 100%;
-			z-index: 1;
-			
-      &:nth-of-type(n+2) {
-      	margin-top: 1rem;
-      }
-      
-			@media screen and (min-width: 50em) {
-				margin-left: 2%;
-				width: 31%;
-				
-        &:nth-of-type(n+1) {
-        	margin-top: 0;
-        }
-        
-				&:nth-of-type(3n+1) {
-					margin-left: 0;
-				}
-			}
-      
-			h4 {
-  			margin: 0;
-			}
-      
-      i {
-        color: $red;
-      }
-		}  		
+#about {
+  .section-third h4 {
+    margin: 0;
   }
-		
-  #projects {
-		div {
-			box-sizing: border-box;
-			display: inline-block;
-			position: relative;
-			text-align: left;
-			vertical-align: top;
-			width: 100%;
-			z-index: 1;
-			
-      &:nth-of-type(n+2) {
-      	margin-top: 1rem;
-      }
-      
-			&:nth-of-type(n+4) {
-				display: none;
-			}
-			
-			@media screen and (min-width: 50em) {
-				margin-left: 1.4%;
-				width: 32%;
-        
-        /* Firefox Hack
-         * Firefox rounds in a very special way,
-         * so we must compensate.
-         */
-        &, x:-moz-any-link {
-				  margin-left: 1.2%;
-        }
-				
-        &:nth-of-type(n+1) {
-        	margin-top: 0;
-        }
-        
-				&:nth-of-type(3n+1) {
-					margin-left: 0;
-				}
-				
-				&:nth-of-type(n+4) {
-					display: inline-block;
-					margin-top: 2rem;
-				}
-			}
-			
-			a {
-				display: block;
-				margin: 0 10%;
-				width: 80%;
-				
-				&:hover {
-					background: rgba(0, 0, 0, 0.5);
-				}
-				
-				&:hover:before {
-					color: white;
-					content: "\1f50d";
-					font-size: 3rem;
-					font-family: "fontello";
-					left: 50%;
-					margin: -.8rem 0 0 -1.5rem;
-					opacity: .5;
-					position: absolute;
-					top: 50%;
-				}
-        
-				.image {
-					border: 1px solid $gray;
-					height: 10rem;
-					width: 100%;
-					z-index: -1;
-				}
-			}
-		}
     
-		div .image {
-			display: block;
-			height: auto;
-			margin: 0 auto;
-			max-height: 24rem;
-			max-width: 100%;
-			position: relative;
-			vertical-align: bottom;
-			width: auto;
-		}
-	}
-  @for $n from 1 through 6 {
-    #projects div:nth-of-type(#{$n}) .image {
-      background: image-url("projects/thumbnails/" + $n + ".png") no-repeat center center;
+  .section-third i {
+    color: $red;
+  }  		
+}
+  
+//
+// #PROJECTS
+//
+
+@for $n from 1 through 6 {
+  #projects div:nth-of-type(#{$n}) .thumbnail-image {
+    background: image-url("projects/thumbnails/" + $n + ".png") no-repeat center center;
+  }
+}
+
+//
+// #FEEDS
+//
+  	
+#feeds img {
+  max-height: 20rem;
+  max-width: 100%;
+}
+
+//
+// #CONTACT
+//
+
+#contact .section-third h4 {
+  text-align: left;
+}
+	
+//
+// #PROJECT
+//
+
+#project {
+  margin-top: 2rem;
+  padding: 5% 15%;
+  text-align: left;
+
+  .section-title {
+    margin: 0 0 .5rem 0;
+  }
+
+  .section-subtitle {
+    font: 200 1rem/1.4rem $font;
+    margin: 0 0 2rem 0;
+  }
+
+  .section-third--quadruple {
+    .image {
+      border: 1px solid $gray;
+      height: 40rem;
+      width: 100%;
+
+      @for $n from 1 through 6 {
+        &.i#{$n} {
+          background: image-url("projects/" + $n + ".png") no-repeat center center;
+        }
+      }
     }
   }
-  	
-  #feeds {
-		div:nth-of-type(1) {
-		  display: inline-block;
-		  vertical-align: top;
-      max-width: 100%;
-		  width: 100%;
-		  
-		  @media screen and (min-width: 50em) {
-        max-width: 19.4rem;
-  		  width: 33%;
-		  }
-		  
-		  img {
-		    max-height: 20rem;
-    		max-width: 100%;
-    		
-    		@media screen and (min-width: 50em) {
-      		max-height: 100%;
-    		}
-  		}
-		}
-		
-		div:nth-of-type(2) {
-		  display: inline-block;
-		  margin-left: 0;
-		  vertical-align: top;
-		  width: 100%;
-		  
-  		@media screen and (min-width: 50em) {
-  		  margin-left: 3%;
-     		width: 63%;
-  		}
-  		
-  		article {
-    		margin-top: 2rem;
-    		
-     		@media screen and (min-width: 50em) {
-     		   &:nth-of-type(1) {
-     		     margin-top: 0;
-     		   }
-    		}     		
-  		}
-		}
-		
-		blockquote,
-		cite,
-		p {
-			font: 200 1.6rem/2rem $font;
-			display: block;
-			margin: 0 auto;
-			text-align: left;
-			width: 100%;
-			
-			@media screen and (min-width: 50em) {
-				font: 200 1.7rem/2.1rem $font;
-			}
-		}
 
-		cite {
-			color: $gray;
-			font: normal .9rem/1.4rem $font;
-			text-align: right;
-		}
-	}
-		
-  #contact {
-		div {
-			margin: auto;
-			text-align: left;
-			width: 100%;
-			
-			@media screen and (min-width: 50em) {
-				width: 80%;
-			}
-			
-			h4 {
-				text-align: left;
-			}
-			
-			textarea {
-				height: 20rem;
-				margin-bottom: 1rem;
-				width: 100%;
-			}
-			
-			label {
-				margin: 0 0 1rem 40%;
-				width: 16rem;
-				
-				input[type=text] {
-					margin: 1rem 0 0 40%;
-					width: 60%;
-				}
-				
-				@media screen and (min-width: 50em) {
-					margin: 0 0 1rem 60%;
-					
-					input[type=text] {
-						margin: 1rem 0 0 60%;
-						width: 40%;
-					}
-				}
-				
-				&:nth-of-type(2) {
-					margin: 0;
-				}
-				
-				a[type=submit] {
-					background: $black;
-          border: 1px solid $black;
-					color: white;
-					float: right;
-					font: 0.9rem/1rem $font;
-					margin: -2.3rem 0;
-					padding: .5rem;
-					position: relative;
-					text-align: center;
-					width: 4rem;
-          
-          /* Firefox Hack
-           * Placeholders have a height in Firefox,
-           * so we must compensate.
-           */
-          &, x:-moz-any-link {
-            margin: -2.1rem -1.1rem;
-          }
-				}
-			}
-	  }
-	}
-	
-	#project {
-		background-color: white;
-		color: $text;
-		margin-top: 2rem;
-		padding: 5% 15%;
-		text-align: left;
+  blockquote {
+    font: 200 1.6rem/2rem $font;
+    margin: 0 auto;
+  }
+}
 
-		@media screen and (min-width: 50em) {
-			margin-top: 6.8rem;
-		}
-		
-		h3 {
-  		color: $text;
-  		margin: 0 0 .5rem 0;
-		}
-		
-		h4 {
-  		color: $gray;
-  		font: 200 1rem/1.4rem $font;
-  		margin: 0 0 2rem 0;
-		}
-		
-		div {
-			box-sizing: border-box;
-			display: inline-block;
-			margin-top: 1rem;
-			position: relative;
-			text-align: left;
-			vertical-align: top;
-			width: 100%;
-			z-index: 1;
-			
-			@media screen and (min-width: 50em) {
-				margin-top: 0;
-				margin-left: 1.4%;
-				width: 32%;
-        
-        /* Firefox Hack
-         * Firefox rounds in a very special way,
-         * so we must compensate.
-         */
-        &, x:-moz-any-link {
-				  margin-left: 1.2%;
-        }
-				
-				&:nth-of-type(3n+1) {
-					margin-left: 0;
-				}
-			}
-			
-			&:nth-of-type(4) {
-			  margin-top: 2rem;
-  			width: 100%;
-  			
-  			.image {
-          border: 1px solid $gray;
-          height: 40rem;
-          width: 100%;
-          
-          @for $n from 1 through 6 {
-            &.i#{$n} {
-              background: image-url("projects/" + $n + ".png") no-repeat center center;
-            }
-          }
-        }
-			}
-			
-			p {
-  			margin-top: 0;
-			}
-		}
-		
-		blockquote {
-			font: 200 1.6rem/2rem $font;
-			display: block;
-			margin: 0 auto;
-			text-align: left;
-			width: 100%;
-			
-			@media screen and (min-width: 50em) {
-				font: 200 1.7rem/2.1rem $font;
-			}
-			
-			&:nth-of-type(2) {
-  			margin-top: 4rem;
-			}
-		}
+//
+// MEDIA QUERIES
+//
+
+@media screen and (min-width: 50em) {
+  #intro {
+    margin-top: 5rem;
+  }
+  
+  #feeds img {
+    max-height: 100%;
+  }
+  
+  #project {
+    margin-top: 6.8rem;
+  }
+  
+  #project blockquote {
+    font: 200 1.7rem/2.1rem $font;
   }
 }

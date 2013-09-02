@@ -1,0 +1,120 @@
+//
+// .SECTION
+//
+
+.section {
+  text-align: center;
+  padding: 5%;
+}
+
+.section.section--black,
+.section:nth-of-type(3n+1) {
+  background-color: $black;
+  color: white;
+
+  .section-title {
+      color: $gray;
+  }
+  
+  a:hover {
+    color: $text;
+  }
+}
+
+.section.section--gray,
+.section:nth-of-type(3n+2) {
+  background-color: $beige;
+  color: $black; 
+}
+
+.section.section--white,
+.section:nth-of-type(3n+3) {
+  background-color: white;
+  color: $text;
+  
+  .section-title {
+    color: $text;
+  }
+
+  .section-subtitle {
+    color: $gray;
+  }
+}
+
+.section-title {
+}
+
+.section-third {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+  text-align: left;
+  vertical-align: top;
+  width: 100%;
+  z-index: 1;
+}
+
+.section-third:nth-of-type(n+2) {
+  margin-top: 1rem;
+}
+
+.section-third:nth-of-type(n+4) {
+  display: none;
+}
+
+//
+// MEDIA QUERIES
+//
+
+@media screen and (min-width: 50em) {
+  .section {
+      padding: 5% 10%;
+  }
+  
+  .section-third {
+    // margin-left: 2%;
+    // width: 31%;
+    margin-left: 1.4%;
+    width: 32%;
+  }
+  
+  .section-third--double {
+    margin-left: 3%;
+    width: 63%;
+  }
+  
+  .section-third--triple {
+    margin-left: 0;
+    width: 80%;
+  }
+  
+  .section-third--quadruple {
+    margin-top: 2rem;
+    width: 100%;
+  }
+  
+  .section-third:nth-of-type(n+1) {
+    margin-top: 0;
+  }
+  
+  .section-third:nth-of-type(3n+1) {
+    margin-left: 0;
+  }
+  
+  .section-third:nth-of-type(n+4) {
+    display: inline-block;
+    margin-top: 2rem;
+  }
+  
+  /* HACK: Firefox rounds in a very special way, so we must compensate. */
+  .section-third, x:-moz-any-link {
+    margin-left: 1.2%;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .section {
+    padding: 5% 15%;
+  }
+}
