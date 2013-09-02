@@ -1,16 +1,20 @@
-<section id="project">
-  <h3><%= @project.name %></h3>
-  <h4><%= @project.client %></h4>
-  <div>
+<section id="project" class="section section--white">
+  <h3 class="section-title"><%= @project.name %></h3>
+  <h4 class="section-subtitle"><%= @project.client %></h4>
+    
+  <div class="section-third">
   	<blockquote>"<%= @project.quote %>"</blockquote>
-	</div>
-	<div>
+  </div>
+    
+  <div class="section-third">
   	<p><%= @description[0] %></p>
-	</div>
-	<div>
+  </div>
+    
+  <div class="section-third">
   	<p><%= @description[1] %></p>
-	</div>
-	<div>
+  </div>
+    
+  <div class="section-third section-third--quadruple">
   	<a href="<%= @project.link %>"><div class="image i<%= @project.id %>" data-id="<%= @project.id %>"></div></a>
-	</div>
+  </div>
 </section>

@@ -19,7 +19,9 @@ SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
       });
       
       // De-linkify logo.
-      $("h1").html($("h1 a").text());
+      var logo = $(".site-logo");
+      logo.removeAttr("href");
+      logo.children("h1").css("color", "white");
       
       // Last section id.
       var lid;
