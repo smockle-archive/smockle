@@ -58,6 +58,8 @@ GEM
       nokogiri (~> 1.5)
       ruby-hmac
     formatador (0.2.4)
+    heroku-deflater (0.5.1)
+      rack (>= 1.4.5)
     hike (1.2.3)
     httparty (0.11.0)
       multi_json (~> 1.0)
@@ -160,6 +162,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   dalli (~> 2.6.4)
   figaro (~> 0.6.4)
+  heroku-deflater
   httparty (~> 0.11.0)
   jquery-rails (~> 2.2.1)
   mail (~> 2.5.4)

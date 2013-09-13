@@ -75,9 +75,4 @@ Smockle::Application.configure do
   
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-  
-  # Serve pre-gzipped static assets
-  middleware.insert_after(
-   'Rack::Cache', Middleware::CompressedStaticAssets,
-   paths["public"].first, config.assets.prefix, config.static_cache_control)
 end
