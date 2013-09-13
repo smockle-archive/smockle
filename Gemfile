@@ -15,7 +15,7 @@ gem "coffee-rails", "~> 4.0.0"
 gem "uglifier", "~> 2.1.1"
 gem "jquery-rails", "~> 2.2.1"
 gem "asset_sync"
-gem "heroku-deflater"
+gem "rack-zippy"
 
 # APIs
 gem "twitter", "~> 4.6.2"
