@@ -22,6 +22,8 @@ Smockle::Application.configure do
 
   # Fall back to assets pipeline if a precompiled asset is missed
   config.assets.compile = true
+  config.static_cache_control = "public, max-age=31536000"
+  config.gzip_compression = true
   
   # Generate digests for assets URLs
   config.assets.digest = true
