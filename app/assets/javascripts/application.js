@@ -17,34 +17,41 @@
 // Using the Garber-Irish method:
 // http://viget.com/inspire/extending-paul-irishs-comprehensive-dom-ready-execution
 
-SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, 
-{
-  common: {
-    init: function() {
-      $("footer .year").html(new Date().getFullYear());
+/*jslint browser: true*/
+/*global $:true */
+var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
+    common: {
+        init: function () {
+            "use strict";
+            
+            $("footer .year").html(new Date().getFullYear());
+        }
     }
-  }
 });
  
-UTIL = {
-  exec: function(controller, action) {
-    var ns = SMOCKLE,
+var UTIL = {
+    exec: function (controller, action) {
+        "use strict";
+        
+        var ns = SMOCKLE;
         action = (action === undefined) ? "init" : action;
  
-    if (controller !== "" && ns[controller] && typeof ns[controller][action] == "function") {
-      ns[controller][action]();
+        if (controller !== "" && ns[controller] && typeof ns[controller][action] === "function") {
+            ns[controller][action]();
+        }
+    },
+ 
+    init: function () {
+        "use strict";
+        
+        var body = document.body,
+            controller = body.getAttribute("data-controller"),
+            action = body.getAttribute("data-action");
+ 
+        UTIL.exec("common");
+        UTIL.exec(controller);
+        UTIL.exec(controller, action);
     }
-  },
- 
-  init: function() {
-    var body = document.body,
-        controller = body.getAttribute("data-controller"),
-        action = body.getAttribute("data-action");
- 
-    UTIL.exec("common");
-    UTIL.exec(controller);
-    UTIL.exec(controller, action);
-  }
 };
  
 $(document).ready(UTIL.init);
