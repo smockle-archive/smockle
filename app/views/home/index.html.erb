@@ -40,29 +40,29 @@
 	<% end %>
 </section>
 
-<section id="feeds" class="section">
+<section id="feeds" class="section" data-ng-app="NG_SMOCKLE" data-ng-controller="feeds">
   <h3 class="section-title">Here are my feeds:</h3>
   
   <div class="section-third">
   <article class="feed">
-    <img class="feed-content" src="http://distilleryimage11.s3.amazonaws.com/39683800d90911e2987422000a9e08f2_6.jpg">
+    <img class="feed-content" data-ng-src="{{ instagram }}">
     <cite class="feed-source">via <a href="https://instagram.com/claydm">Instagram</a></cite>
   </article>
   </div>
   
   <div class="section-third section-third--double">
     <article class="feed">
-      <blockquote class="feed-content">Speed Test: Location: New York, USA. Time: 287 ms. Size: 532.4 kB. Requests: 17. <a href="http://t.co/q7xgl5Cnxv" rel="nofollow">http://t.co/q7xgl5Cnxv</a></blockquote>
+      <blockquote class="feed-content" data-ng-bind-html-unsafe="twitter"></blockquote>
       <cite class="feed-source">via <a href="https://twitter.com/smockled">Twitter</a></cite>
     </article>
       
     <article class="feed">
-      <blockquote class="feed-content"><a href="http://stackoverflow.com/questions/16931600/can-i-test-for-visual-regressions-in-my-responsive-design">Question</a>: Can I test for visual regressions in my responsive design?</blockquote>
+      <blockquote class="feed-content" data-ng-bind-html-unsafe="stackoverflow"></blockquote>
       <cite class="feed-source">via <a href="https://stackoverflow.com/users/1923134/smockle">Stack Overflow</a></cite>
     </article>
       
     <article class="feed">
-      <blockquote class="feed-content">30 commits to <a href="https://github.com/smockle/smockle">smockle</a> and 1 other repository this week. 1 new <a href="https://gist.github.com/smockle">gist</a>.</blockquote>
+      <blockquote class="feed-content" data-ng-bind-html-unsafe="github"></blockquote>
       <cite class="feed-source">via <a href="https://github.com/smockle">Github</a></cite>
     </article>
   </div>
