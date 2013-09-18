@@ -10,7 +10,7 @@ var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
             "use strict";
             
             // Error pages only have one section, so disable scrolling.
-//            $(document).off("click", "nav a");
+            $(document).off("click", "nav a");
 
             // Linkify navigation.
             $("nav a").each(function () {
