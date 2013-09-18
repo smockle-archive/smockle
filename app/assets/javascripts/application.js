@@ -20,21 +20,7 @@
 // Using the Garber-Irish method:
 // http://viget.com/inspire/extending-paul-irishs-comprehensive-dom-ready-execution
 
-var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
-  common: {
-    init: function () {
-      "use strict";
-
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
-      ga('create', 'UA-37140610-3', 'smockle.com');
-      ga('send', 'pageview');
-    }
-  }
-});
+var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {});
  
 var UTIL = {
     exec: function (controller, action) {
