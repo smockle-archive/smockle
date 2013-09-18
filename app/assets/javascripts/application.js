@@ -20,13 +20,7 @@
 // Using the Garber-Irish method:
 // http://viget.com/inspire/extending-paul-irishs-comprehensive-dom-ready-execution
 
-var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
-//    common: {
-//        init: function () {
-//            "use strict";
-//        }
-//    }
-});
+var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {});
  
 var UTIL = {
     exec: function (controller, action) {
