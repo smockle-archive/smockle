@@ -1,8 +1,7 @@
 Smockle::Application.routes.draw do
 
   get "home/index"
-  get "home/feeds", :defaults => { :format => "json" }
-#  get "home/feeds", constraints: { xhr?: true }
+  get "home/feeds", :defaults => { :format => "json" }, constraints: { xhr?: true }
   post "/mail" => "home#mail"
   get "/projects(/:id)" => "home#projects"
 

@@ -56,4 +56,4 @@ var UTIL = {
     }
 };
 
-$.ready(UTIL.init);
+$(document).ready(UTIL.init);
