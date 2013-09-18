@@ -8,28 +8,20 @@
  */
 
 /*jslint browser: true, devel: true, bitwise: true */
-/*global $:true */
+/*global $: true */
 var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
     home: {
         index: function () {
             "use strict";
-            
-            // Load feeds.
-            $.ajax({
-                url: "/home/feeds",
-                success: function (data) {
-                    $("section#feeds").html(data);
-                }
-            });
           
             // De-linkify logo.
             // Last section id.
-            var logo = $(".site-logo"),
+            var logo = document.getElementsByClassName("site-logo")[0],
                 lid,
                 sections;
-            logo.removeAttr("href");
-            logo.children("h1").css("color", "white");
-      
+            logo.removeAttribute("href");
+            logo.getElementsByTagName("h1")[0].css({"color": "white"});
+	  
             // Collection of sections.
             sections = $("nav a").map(function () {
                 var item = $($(this).attr("href"));
@@ -88,7 +80,7 @@ var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
                 $("html, body").stop().animate({ scrollTop: c }, 600, function () { $(window).on("scroll", scroll); });
             }
             $(document).on("click", "nav a", click);
-	  
+
             // Submit link.
             $("#contact a[type=submit]").on("click", function () {
                 var form = $("#contact form"),

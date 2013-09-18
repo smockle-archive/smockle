@@ -5,11 +5,7 @@ class HomeController < ApplicationController
   end
   
   def feeds
-    @twitter = Feed.twitter
-    @stackoverflow = Feed.stackoverflow
-    @instagram = Feed.instagram
-    @github = Feed.github
-    render :partial => "feeds"
+    render :json => { :twitter => Feed.twitter, :stackoverflow => Feed.stackoverflow, :instagram => Feed.instagram, :github => Feed.github }
   end
   
   def mail

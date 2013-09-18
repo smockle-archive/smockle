@@ -3,7 +3,7 @@
 // You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 /*jslint browser: true*/
-/*global $:true */
+/*global $: true */
 var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
     errors: {
         init: function () {

@@ -10,23 +10,25 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require black-coffee
 //= require jquery
 //= require jquery_ujs
+//= require ready
+//= require extend
 //= require_tree .
+
+/*jslint browser: true */
+/*global $: true */
 
 // Using the Garber-Irish method:
 // http://viget.com/inspire/extending-paul-irishs-comprehensive-dom-ready-execution
 
-/*jslint browser: true*/
-/*global $:true */
 var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
-    common: {
-        init: function () {
-            "use strict";
-            
-            $("footer .year").html(new Date().getFullYear());
-        }
-    }
+//    common: {
+//        init: function () {
+//            "use strict";
+//        }
+//    }
 });
  
 var UTIL = {
@@ -53,5 +55,5 @@ var UTIL = {
         UTIL.exec(controller, action);
     }
 };
- 
-$(document).ready(UTIL.init);
+
+$.ready(UTIL.init);
