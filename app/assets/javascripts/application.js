@@ -15,12 +15,18 @@
 //= require extend
 //= require_tree .
 
+/*jslint browser: true */
+/*global $: true */
+
 // Using the Garber-Irish method:
 // http://viget.com/inspire/extending-paul-irishs-comprehensive-dom-ready-execution
 
-/*jslint browser: true */
-/*global $: true */
 var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
+//    common: {
+//        init: function () {
+//            "use strict";
+//        }
+//    }
 });
  
 var UTIL = {
@@ -48,4 +54,4 @@ var UTIL = {
     }
 };
 
-// $.ready(UTIL.init);
+$.ready(UTIL.init);
