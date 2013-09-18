@@ -16,11 +16,11 @@ var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
           
             // De-linkify logo.
             // Last section id.
-            var logo = document.getElementsByClassName("site-logo")[0],
+            var logo = $(".site-logo"),
                 lid,
                 sections;
-            logo.removeAttribute("href");
-            logo.getElementsByTagName("h1")[0].css({"color": "white"});
+            logo.removeAttr("href");
+            logo.children("h1").css("color", "white");
 	  
             // Collection of sections.
             sections = $("nav a").map(function () {
