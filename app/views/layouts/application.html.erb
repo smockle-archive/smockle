@@ -33,7 +33,7 @@
   <!-- Size should be 32 x 32 pixels -->
   <%= favicon_link_tag "favicon.ico" %>
 </head>
-<body data-controller="<%= controller_name %>" data-action="<%= action_name %>">
+<body data-controller="<%= controller_name %>" data-action="<%= action_name %>" data-env="<%= Rails.env %>">
 	<header>
 		<a class="site-logo" href="/"><h1>Smockle.</h1></a>
 		<nav>
@@ -47,17 +47,7 @@
   <%= yield %>
 	
   <footer>
-		<p>Copyright &copy; <%= Time.now.year %> Clay Miller. All rights reserved.</p>
-	</footer>
-  
-  <% if Rails.env.production? %>
-  <!-- Google Analytics. -->
-  <script>
-      var _gaq=[['_setAccount','UA-37140610-1'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src='//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
-  <% end %>
+      <p>Copyright &copy; <%= Time.now.year %> Clay Miller. All rights reserved.</p>
+  </footer>
 </body>
 </html>
