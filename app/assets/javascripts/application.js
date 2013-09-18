@@ -11,6 +11,8 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require black-coffee
+//= require jquery
+//= require jquery_ujs
 //= require ready
 //= require extend
 //= require_tree .
