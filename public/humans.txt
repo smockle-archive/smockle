@@ -13,6 +13,7 @@ Auburn, United States
 
 /* INGREDIENTS */
 
+AngularJS
 Dalli
 Figaro
 Github
@@ -27,4 +28,4 @@ Unicorn
 
 /* INSTRUCTIONS */
 
-Preheat Heroku to 450. Measure three cups of Rails code into a large glass Github repo. Slowly add Dalli, Figaro, HTTParty, Memcachier, Postgres while stirring constantly. Push code to Heroku. Check after 12-15 minutes using New Relic and Papertrailapp. Serve warm with Unicorn.
+Preheat Heroku to 450. Measure three cups of Rails and AngularJS code into a large glass Github repo. Slowly add Dalli, Figaro, HTTParty, Memcachier, Postgres while stirring constantly. Push code to Heroku. Check after 12-15 minutes using New Relic and Papertrailapp. Serve warm with Unicorn.
