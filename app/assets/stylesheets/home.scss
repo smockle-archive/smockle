@@ -70,8 +70,9 @@
   }
 
   .section-third--quadruple {
+    border: 1px solid $gray;
+    
     .image {
-      border: 1px solid $gray;
       height: 40rem;
       width: 100%;
 
