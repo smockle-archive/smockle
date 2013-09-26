@@ -28,9 +28,11 @@
 // #PROJECTS
 //
 
-@for $n from 1 through 6 {
+$projects: 9;
+
+@for $n from 1 through $projects {
   #projects div:nth-of-type(#{$n}) .thumbnail-image {
-    background: image-url("projects/thumbnails/" + $n + ".png") no-repeat center center;
+    background: image-url("projects/thumbnails/" + ($projects + 1 - $n) + ".png") no-repeat center center;
   }
 }
 
@@ -74,9 +76,10 @@
     
     .image {
       height: 40rem;
+      max-height: 638px;
       width: 100%;
 
-      @for $n from 1 through 6 {
+      @for $n from 1 through $projects {
         &.i#{$n} {
           background: image-url("projects/" + $n + ".png") no-repeat center center;
         }
