@@ -35,13 +35,15 @@
 </head>
 <body data-controller="<%= controller_name %>" data-action="<%= action_name %>">
 	<header>
-		<a class="site-logo" href="/"><h1>Smockle.</h1></a>
-		<nav>
-			<a href="#about">ABOUT</a>
-			<a href="#projects">WORK</a>
-			<a href="#feeds">FEEDS</a>
-			<a href="#contact">CONTACT</a>
-		</nav>
+        <div class="section-wrapper">
+            <a class="site-logo" href="/"><h1>Smockle.</h1></a>
+            <nav>
+                <a href="#about">ABOUT</a>
+                <a href="#projects">WORK</a>
+                <a href="#feeds">FEEDS</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+        </div>
 	</header>
 
   <%= yield %>
