@@ -81,42 +81,46 @@ var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
             }
             $(document).on("click", "nav a", click);
 
+            // Hide loading block by default.
+            $("#contact .loading").hide();
+          
             // Submit link.
             $("#contact .form-button").on("click", function () {
                 var form = $("#contact form"),
-                    values = form.serialize();
-                
-                $("#contact textarea").hide();
-                $("#contact label").hide();
-                $("#contact h4").hide();
-                $("#contact .loading").show();
+                    values = form.serialize(),
+                    button = $("#contact .form-button"),
+                    contents = $("#contact h4, #contact form, #contact .loading");
+              
+                button.attr("disabled", true);
+                contents.toggle();
                 $("#contact").css("min-height", "0");
               
-//                $.ajax({
-//                    url: form.attr("action"),
-//                    dataType: "json",
-//                    data: values,
-//                    type: "POST",
-//                    success: function (data) {
-//                        $("#contact h4").text(data.message).css("text-align", "center");
-//                        $("#contact textarea").hide();
-//                        $("#contact label").hide();
-//                    },
-//                    error: function (data) {
-//                        var errors = $.parseJSON(data.responseText);
-//                        console.log($.parseJSON(data.responseText));
-//                        
-//                        if (errors.content !== undefined) {
-//                            $("#contact textarea").attr("placeholder", "Content " + errors.content + ".");
-//                        }
-//                        if (errors.name !== undefined) {
-//                            $("#contact label:nth-of-type(1) input").attr("placeholder", "Name " + errors.name + ".");
-//                        }
-//                        if (errors.email !== undefined) {
-//                            $("#contact label:nth-of-type(2) input").attr("placeholder", "Email " + errors.email + ".");
-//                        }
-//                    }
-//                });
+                $.ajax({
+                    url: form.attr("action"),
+                    dataType: "json",
+                    data: values,
+                    type: "POST",
+                    success: function (data) {
+                        contents.hide();
+                        $("#contact h4").text(data.message).css("text-align", "center").show();
+                    },
+                    error: function (data) {
+                        button.attr("disabled", false);
+                        contents.toggle();
+                        var errors = $.parseJSON(data.responseText);
+                        console.log($.parseJSON(data.responseText));
+                        
+                        if (errors.content !== undefined) {
+                            $("#contact textarea").attr("placeholder", "Content " + errors.content + ".");
+                        }
+                        if (errors.name !== undefined) {
+                            $("#contact label:nth-of-type(1) input").attr("placeholder", "Name " + errors.name + ".");
+                        }
+                        if (errors.email !== undefined) {
+                            $("#contact label:nth-of-type(2) input").attr("placeholder", "Email " + errors.email + ".");
+                        }
+                    }
+                });
             });
     
             // Safari Hack
