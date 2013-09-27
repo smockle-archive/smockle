@@ -13,6 +13,7 @@
  *= depend_on _fontello.scss
  *= depend_on _base.scss
  *= depend_on _section.scss
+ *= depend_on _loading.scss
  *= depend_on _thumbnail.scss
  *= depend_on _feed.scss
  *= depend_on _form.scss
@@ -131,6 +132,7 @@ footer {
 //
 
 @import "_section";
+@import "_loading";
 @import "_thumbnail";
 @import "_feed";
 @import "_form";

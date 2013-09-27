@@ -81,6 +81,13 @@
         <h3 class="section-title">Contact me! Talk about a project, or just say hello.</h3>
         
         <div class="section-third section-third--triple">
+          <ul class="loading" style="display: none;">
+            <li class="loading-spinlet"></li>
+            <li class="loading-spinlet"></li>
+            <li class="loading-spinlet"></li>
+            <li class="loading-spinlet"></li>
+          </ul>
+          
           <h4>Dear Smockle,</h4>
           
           <%= form_for @message, :class => "form", :url => { :action => "mail", :controller => "home" }, :method => :post do |f| %>
@@ -93,7 +100,7 @@
               
             <label class="form-label">
               <%= f.text_field :email, :class => "form-field", :placeholder => "Your email." %>
-              <a type="submit" class="form-button">Send</a>
+              <button type="button" class="form-button">Send</button>
             </label>
           <% end %>
         </div>

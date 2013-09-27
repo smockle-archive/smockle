@@ -49,6 +49,11 @@ $projects: 9;
 // #CONTACT
 //
 
+#contact {
+  min-height: 35.4rem;
+  transition: min-height .6s linear;
+}
+      
 #contact .section-third h4 {
   text-align: left;
 }
