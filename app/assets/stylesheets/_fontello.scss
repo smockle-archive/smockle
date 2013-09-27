@@ -1,22 +1,21 @@
-@charset "UTF-8";
-
- @font-face {
+@font-face {
   font-family: 'fontello';
-  src: asset-url("fontello.eot?24150404", font);
-  src: asset-url("fontello.eot?24150404#iefix", font) format('embedded-opentype'),
-       asset-url("fontello.woff?24150404", font) format('woff'),
-       asset-url("fontello.ttf?24150404", font) format('truetype'),
-       asset-url("fontello.svg?24150404#fontello", font) format('svg');
+  src: asset-url("fontello.eot?9309851", font);
+  src: asset-url("fontello.eot?9309851#iefix", font) format("embedded-opentype"),
+       asset-url("fontello.woff?9309851", font) format("woff"),
+       asset-url("fontello.ttf?9309851", font) format("truetype"),
+       asset-url("fontello.svg?9309851#fontello", font) format("svg");
   font-weight: normal;
   font-style: normal;
 }
+
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 /*
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?24150404#fontello') format('svg');
+    src: url('../font/fontello.svg?9309851#fontello') format('svg');
   }
 }
 */
@@ -41,7 +40,7 @@
   /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
  
-  /* Animation center compensation - magrins should be symmetric */
+  /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
   margin-left: .2em;
  
@@ -52,12 +51,7 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-cloud:before { content: '\2601'; } /* '☁' */
-.icon-window:before { content: '\e74e'; } /* '' */
-.icon-flow-tree:before { content: '\e792'; } /* '' */
-.icon-lightbulb:before { content: '\f0eb'; } /* '' */
-.icon-quote-left:before { content: '\f10d'; } /* '' */
-.icon-quote-right:before { content: '\f10e'; } /* '' */
-.icon-search:before { content: '🔍'; } /* '\1f50d' */
-.icon-wrench:before { content: '🔧'; } /* '\1f527' */
-.icon-rocket:before { content: '🚀'; } /* '\1f680' */
+.icon-flow-tree:before { content: '\e802'; } /* '' */
+.icon-search:before { content: '\e800'; } /* '' */
+.icon-wrench:before { content: '\e801'; } /* '' */
+.icon-rocket:before { content: '\e803'; } /* '' */
