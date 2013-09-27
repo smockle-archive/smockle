@@ -82,41 +82,47 @@ var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
             $(document).on("click", "nav a", click);
 
             // Submit link.
-            $("#contact a[type=submit]").on("click", function () {
+            $("#contact .form-button").on("click", function () {
                 var form = $("#contact form"),
                     values = form.serialize();
                 
-                $.ajax({
-                    url: form.attr("action"),
-                    dataType: "json",
-                    data: values,
-                    type: "POST",
-                    success: function (data) {
-                        $("#contact h4").text(data.message).css("text-align", "center");
-                        $("#contact textarea").hide();
-                        $("#contact label").hide();
-                    },
-                    error: function (data) {
-                        var errors = $.parseJSON(data.responseText);
-                        console.log($.parseJSON(data.responseText));
-                        
-                        if (errors.content !== undefined) {
-                            $("#contact textarea").attr("placeholder", "Content " + errors.content + ".");
-                        }
-                        if (errors.name !== undefined) {
-                            $("#contact label:nth-of-type(1) input").attr("placeholder", "Name " + errors.name + ".");
-                        }
-                        if (errors.email !== undefined) {
-                            $("#contact label:nth-of-type(2) input").attr("placeholder", "Email " + errors.email + ".");
-                        }
-                    }
-                });
+                $("#contact textarea").hide();
+                $("#contact label").hide();
+                $("#contact h4").hide();
+                $("#contact .loading").show();
+                $("#contact").css("min-height", "0");
+              
+//                $.ajax({
+//                    url: form.attr("action"),
+//                    dataType: "json",
+//                    data: values,
+//                    type: "POST",
+//                    success: function (data) {
+//                        $("#contact h4").text(data.message).css("text-align", "center");
+//                        $("#contact textarea").hide();
+//                        $("#contact label").hide();
+//                    },
+//                    error: function (data) {
+//                        var errors = $.parseJSON(data.responseText);
+//                        console.log($.parseJSON(data.responseText));
+//                        
+//                        if (errors.content !== undefined) {
+//                            $("#contact textarea").attr("placeholder", "Content " + errors.content + ".");
+//                        }
+//                        if (errors.name !== undefined) {
+//                            $("#contact label:nth-of-type(1) input").attr("placeholder", "Name " + errors.name + ".");
+//                        }
+//                        if (errors.email !== undefined) {
+//                            $("#contact label:nth-of-type(2) input").attr("placeholder", "Email " + errors.email + ".");
+//                        }
+//                    }
+//                });
             });
     
             // Safari Hack
             // Safari rounds in a very special way, so we must compensate.
             if (/Constructor/.test(window.HTMLElement)) {
-                $("#contact a[type=submit]").css("margin", "-2.34rem 0");
+                $("#contact .form-button").css("margin", "-2.34rem 0");
             }
         },
     

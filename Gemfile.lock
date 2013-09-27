@@ -30,6 +30,8 @@ GEM
       activemodel
       fog (>= 1.8.0)
     atomic (1.1.14)
+    autoprefixer-rails (0.8.20130923)
+      execjs
     builder (3.1.4)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
@@ -80,7 +82,7 @@ GEM
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.7.0)
-    newrelic_rpm (3.6.7.152)
+    newrelic_rpm (3.6.7.159)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     pg (0.17.0)
@@ -157,6 +159,7 @@ PLATFORMS
 
 DEPENDENCIES
   asset_sync
+  autoprefixer-rails
   coffee-rails (~> 4.0.0)
   dalli
   figaro
