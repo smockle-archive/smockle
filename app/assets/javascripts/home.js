@@ -80,19 +80,19 @@ var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
                 $("html, body").stop().animate({ scrollTop: c }, 600, function () { $(window).on("scroll", scroll); });
             }
             $(document).on("click", "nav a", click);
-
-            // Hide loading block by default.
-            $("#contact .loading").hide();
           
             // Submit link.
             $("#contact .form-button").on("click", function () {
                 var form = $("#contact form"),
                     values = form.serialize(),
                     button = $("#contact .form-button"),
-                    contents = $("#contact h4, #contact form, #contact .loading");
+                    loading = $("#contact .loading"),
+                    contents = $("#contact h4, #contact form");
               
                 button.attr("disabled", true);
+                loading.removeClass("hidden");
                 contents.toggle();
+                
                 $("#contact").css("min-height", "0");
               
                 $.ajax({
@@ -101,14 +101,15 @@ var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
                     data: values,
                     type: "POST",
                     success: function (data) {
+                        loading.addClass("hidden");
                         contents.hide();
                         $("#contact h4").text(data.message).css("text-align", "center").show();
                     },
                     error: function (data) {
                         button.attr("disabled", false);
+                        loading.addClass("hidden");
                         contents.toggle();
                         var errors = $.parseJSON(data.responseText);
-                        console.log($.parseJSON(data.responseText));
                         
                         if (errors.content !== undefined) {
                             $("#contact textarea").attr("placeholder", "Content " + errors.content + ".");

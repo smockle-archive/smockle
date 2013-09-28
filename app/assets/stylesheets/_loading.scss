@@ -6,6 +6,10 @@ $loading-size: 4rem;
 $loading-speed: 2s;
 $loading-fg: $black;
 
+.loading.hidden {
+  display: none;
+}
+
 .loading {
   display: flex;
   flex-wrap: wrap;
