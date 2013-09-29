@@ -31,13 +31,12 @@
 </section>
 
 <section id="projects" class="section">
-    <div class="section-wrapper">
-        <h3 class="section-title">Here are my recent projects:</h3>
+    <div class="section-wrapper flex">
+        <h3 class="flex-title">Here are my recent projects:</h3>
       
         <% @projects.each do |project| %>
-        <div class="section-third thumbnail">
+        <div class="flex-content thumbnail">
             <h4 class="thumbnail-title"><%= project.name %></h4>
-              
             <a class="thumbnail-body" href="/projects/<%= project.id %>">
                 <div class="thumbnail-image" data-id="<%= project.id %>"></div>
             </a>

@@ -3,9 +3,11 @@
 //
 
 .thumbnail {
+  padding-bottom: 2rem;
 }
 
 .thumbnail-title {
+  margin-bottom: 0.5rem;
 }
 
 .thumbnail-body {
@@ -13,24 +15,23 @@
   display: block;
   margin: 0 auto;
   max-height: 158px;
-  max-width: 255px;
-  width: 80%;
-}
-
-.thumbnail-body:hover {
-  background: rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 
 .thumbnail-body:hover:before {
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   content: "\e800";
   font-size: 3rem;
   font-family: "fontello";
-  left: 50%;
-  margin: -.8rem 0 0 -1.5rem;
+  left: 0;
   opacity: .5;
+  text-align: center;
+  padding-top: 3rem;
   position: absolute;
-  top: 50%;
+  top: 0;
+  height: 6.9rem;
+  width: 100%;
 }
 
 .thumbnail-image {
@@ -39,8 +40,5 @@
   margin: 0 auto;
   max-height: 158px;
   max-width: 255px;
-  position: relative;
-  vertical-align: bottom;
-  width: 100%;
   z-index: -1;
 }
