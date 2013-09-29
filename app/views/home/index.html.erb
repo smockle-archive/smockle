@@ -46,17 +46,17 @@
 </section>
 
 <section id="feeds" class="section" data-ng-app="NG_SMOCKLE" data-ng-controller="feeds" data-ng-csp>
-    <div class="section-wrapper">
-        <h3 class="section-title">Here are my feeds:</h3>
+    <div class="section-wrapper flex">
+        <h3 class="flex-title">Here are my feeds:</h3>
         
-        <div class="section-third">
+        <div class="flex-content">
         <article class="feed">
           <img class="feed-content" data-ng-src="{{ instagram }}">
           <cite class="feed-source">via <a href="https://instagram.com/claydm">Instagram</a></cite>
         </article>
         </div>
         
-        <div class="section-third section-third--double">
+        <div class="flex-content flex-double">
           <article class="feed">
             <blockquote class="feed-content" data-ng-bind-html-unsafe="twitter"></blockquote>
             <cite class="feed-source">via <a href="https://twitter.com/smockled">Twitter</a></cite>

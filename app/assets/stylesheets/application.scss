@@ -104,6 +104,10 @@ header {
       border-bottom: 2px solid $red;
     }
   }
+  
+  .site-logo {
+    padding: 0;
+  }
 }
   
 //
@@ -122,10 +126,17 @@ footer {
 
 @media screen and (min-width: 50em) {
   header {
-    padding: 0 15%;
+    padding: 0 10%;
     position: fixed;
-    width: 70%;
+    width: 80%;
     top: 0;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  header {
+    padding: 0 15%;
+    width: 70%;
   }
 }
 
