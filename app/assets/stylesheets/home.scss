@@ -15,13 +15,14 @@
 //
   
 #about {
-  .section-third h4 {
-    margin: 0;
+  .flex-content h4 {
+    margin-bottom: .5rem;
   }
     
-  .section-third i {
+  .flex-content i {
     color: $red;
-  }  		
+    transition: color .2s linear;
+  }
 }
   
 //
