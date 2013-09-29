@@ -13,6 +13,7 @@
  *= depend_on _fontello.scss
  *= depend_on _base.scss
  *= depend_on _section.scss
+ *= depend_on _flex.scss
  *= depend_on _loading.scss
  *= depend_on _thumbnail.scss
  *= depend_on _feed.scss
@@ -36,6 +37,12 @@ $black: #282828;
 $beige: #eff2f4;
 $gray: #a7a7a7;
 $text: #5b5b5b;
+
+//
+// SIZES
+//
+
+$max-width: 1008px;
 
 //
 // FONTS
@@ -70,18 +77,24 @@ header {
   position: static;
   width: auto;
   z-index: 2;
-	
+  
+  .section-wrapper {
+    align-items: center;
+    display: flex;   
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
   nav {
-    display: block;
-    font: bold .8rem $font;
-    margin-top: 3rem;
-    position: relative;
+    display: flex;
+    font: normal .8rem $font;
+    justify-content: space-between;
+    width: 16rem;
   }
   
   a {
     color: white;
-    margin-left: .8rem;
-    padding: .4rem  0;
+    padding: .2rem 0;
     
     &:hover {
       color: $gray;
@@ -90,10 +103,6 @@ header {
     &.active {
       border-bottom: 2px solid $red;
     }
-  }
-
-  .site-logo {
-    margin-left: 0;
   }
 }
   
@@ -118,13 +127,6 @@ footer {
     width: 70%;
     top: 0;
   }
-  
-  header nav {
-    display: inline-block;
-    right: 15%;
-    top: 0;
-    position: fixed;
-  }
 }
 
 //
@@ -132,6 +134,7 @@ footer {
 //
 
 @import "_section";
+@import "_flex";
 @import "_loading";
 @import "_thumbnail";
 @import "_feed";
