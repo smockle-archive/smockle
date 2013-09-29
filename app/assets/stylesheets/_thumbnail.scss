@@ -19,7 +19,7 @@
 }
 
 .thumbnail-body:hover:before {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   color: white;
   content: "\e800";
   font-size: 3rem;
@@ -39,6 +39,5 @@
   height: 10rem;
   margin: 0 auto;
   max-height: 158px;
-  max-width: 255px;
   z-index: -1;
 }
