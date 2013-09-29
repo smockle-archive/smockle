@@ -49,7 +49,15 @@ $projects: 9;
   	
 #feeds img {
   max-height: 20rem;
-  max-width: 100%;
+  max-width: 25.7rem;
+}
+
+#feeds .flex-content:nth-of-type(1) {
+  flex-grow: 0;
+}
+
+#feeds .flex-content:nth-of-type(2) {
+  flex-grow: 1;
 }
 
 //
