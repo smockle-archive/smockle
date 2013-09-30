@@ -71,45 +71,55 @@ $font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 // HEADER
 //
 
-header {
-  background-color: $black;
+header.section {
   padding: 0 5%;
   position: static;
-  width: auto;
   z-index: 2;
+}
+
+header > .flex {
+  align-items: center;
+}
+
+/* HACK: Firefox doesn't support flex-wrap, so we must compensate. */  
+.site-logo, x:-moz-any-link {
+  text-align: left;
+  width: 100%;
+}
+
+.site-nav {
+  flex-wrap: nowrap;
+  font: normal .8rem $font;
+  width: 16rem;
+}
+
+/* HACK: Firefox doesn't support flex-wrap, so we must compensate. */  
+.site-nav, x:-moz-any-link {
+  text-align: left;
+  width: 100%;
+}
+
+.site-nav a {
+  padding: .2rem 0;
+}
+
+/* HACK: Firefox doesn't support flex-wrap, so we must compensate. */  
+.site-nav a, x:-moz-any-link {
+  margin-right: 3.3%;
+}
+
+header a {
+  color: white;
   
-  .section-wrapper {
-    align-items: center;
-    display: flex;   
-    flex-wrap: wrap;
-    justify-content: space-between;
+  &:hover {
+    color: $gray;
   }
-  
-  nav {
-    display: flex;
-    font: normal .8rem $font;
-    justify-content: space-between;
-    width: 16rem;
-  }
-  
-  a {
-    color: white;
-    padding: .2rem 0;
-    
-    &:hover {
-      color: $gray;
-    }
-  
-    &.active {
-      border-bottom: 2px solid $red;
-    }
-  }
-  
-  .site-logo {
-    padding: 0;
+
+  &.active {
+    border-bottom: 2px solid $red;
   }
 }
-  
+
 //
 // FOOTER
 //
@@ -124,8 +134,27 @@ footer {
 // MEDIA QUERIES
 //
 
+@media screen and (min-width: 440px) {
+  /* HACK: Firefox doesn't support flex-wrap, so we must compensate. */  
+  header .flex, x:-moz-any-link {
+    display: flex;
+  }
+  
+  /* HACK: Firefox doesn't support flex-wrap, so we must compensate. */  
+  .site-logo, x:-moz-any-link {
+    text-align: inherit;
+    width: auto;
+  }
+  
+  /* HACK: Firefox doesn't support flex-wrap, so we must compensate. */  
+  .site-nav, x:-moz-any-link {
+    text-align: inherit;
+    width: 16rem;
+  }
+}
+
 @media screen and (min-width: 50em) {
-  header {
+  header.section {
     padding: 0 10%;
     position: fixed;
     width: 80%;
@@ -134,7 +163,7 @@ footer {
 }
 
 @media screen and (min-width: 75em) {
-  header {
+  header.section {
     padding: 0 15%;
     width: 70%;
   }
