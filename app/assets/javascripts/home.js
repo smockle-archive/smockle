@@ -123,12 +123,6 @@ var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
                     }
                 });
             });
-    
-            // Safari Hack
-            // Safari rounds in a very special way, so we must compensate.
-//            if (/Constructor/.test(window.HTMLElement)) {
-//                $("#contact .form-button").css("margin", "-2.34rem 0");
-//            }
         },
     
         projects: function () {

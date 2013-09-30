@@ -15,10 +15,12 @@
 
 .flex-title {
   flex-basis: 100%;
+  width: 100%;
 }
 
 .flex-content {
   flex-basis: 100%;
+  width: 100%;
 }
 
 /* HACK: Firefox doesn't support flex-wrap, so we must compensate. */
