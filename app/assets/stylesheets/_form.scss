@@ -5,7 +5,13 @@
 .form-wrapper {
   margin: 0 auto;
   text-align: left;
-  width: 80%;
+  width: 100%;
+}
+
+@media screen and (min-width: 50em) {
+  .form-wrapper {
+    width: 80%;
+  }
 }
 
 .form-wrapper h4 {
@@ -19,9 +25,16 @@
 .form-controls {
   display: flex;
   justify-content: flex-start;
-  margin-left: 60%;
-  width: 40%;
+  margin: 0;
+  width: 100%;
   flex-wrap: wrap;
+}
+
+@media screen and (min-width: 50em) {
+  .form-controls {
+    margin-left: 60%;
+    width: 40%;
+  }
 }
 
 /* HACK: Firefox doesn't support flex-wrap, so we must compensate. */
