@@ -61,9 +61,15 @@ input, select, textarea {
 }
   
 /* HACK: Placeholders have a height in Firefox, so we must compensate. */
-textarea, input, x:-moz-any-link {
-  height: 1rem;
-  padding: .5rem;
+input, x:-moz-any-link {
+  height: 2rem;
+  padding: 0 1rem;
+}
+
+/* HACK: Placeholders have a height in Firefox, so we must compensate. */
+textarea, x:-moz-any-link {
+  height: 2rem;
+  padding: 1rem;
 }
   
 input:focus, select:focus, textarea:focus {
