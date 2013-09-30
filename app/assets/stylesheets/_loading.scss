@@ -20,6 +20,11 @@ $loading-fg: $black;
   padding: 0;
 }
 
+/* HACK: Firefox doesn't support flex-wrap, so we must compensate. */
+.loading, x:-moz-any-link {
+  max-width: (4 * $loading-size);
+}
+
 .loading-spinlet {
   -webkit-animation: spin $loading-speed infinite linear;
   animation: spin $loading-speed infinite linear;
