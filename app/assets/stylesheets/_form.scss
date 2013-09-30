@@ -8,17 +8,13 @@
   width: 100%;
 }
 
-@media screen and (min-width: 50em) {
-  .form-wrapper {
-    width: 80%;
-  }
-}
-
 .form-wrapper h4 {
   text-align: left;
 }
 
-.form-wrapper textarea {
+.form-textarea {
+  height: 20rem;
+  margin-bottom: 1rem;
   width: 100%;
 }
 
@@ -30,90 +26,50 @@
   flex-wrap: wrap;
 }
 
-@media screen and (min-width: 50em) {
-  .form-controls {
-    margin-left: 60%;
-    width: 40%;
-  }
-}
-
 /* HACK: Firefox doesn't support flex-wrap, so we must compensate. */
 .form-controls, x:-moz-any-link {
   display: block;
 }
 
-.form-controls span {
+.form-label {
   padding-bottom: 1rem;
 }
 
 /* HACK: Firefox doesn't support flex-wrap, so we must compensate. */
-.form-controls span, x:-moz-any-link {
+.form-label, x:-moz-any-link {
   display: block;
 }
 
-.form-controls input,
-.form-controls button {
+.form-field,
+.form-button {
   margin-bottom: 1rem;
 }
 
-.form-controls input:nth-of-type(1) {
+.form-field:nth-of-type(1) {
   flex-basis: 100%;
   width: 100%;
 }
 
-.form-controls input:nth-of-type(2) {
+.form-field:nth-of-type(2) {
   flex-basis: 75%;
   width: 75%;
 }
 
 /* HACK: Firefox doesn't support flex-wrap, so we must compensate. */
-.form-controls input:nth-of-type(2), x:-moz-any-link {
+.form-field:nth-of-type(2), x:-moz-any-link {
   width: 100%;
-}
-
-.form-controls button {
-  flex-basis: 25%;
-  width: 25%;
-}
-
-.form {
-}
-
-.form-textarea {
-  height: 20rem;
-  margin-bottom: 1rem;
-}
-
-.form-label {
-//  margin: 0 0 1rem 40%;
-  width: 16rem;
-}
-
-.form-label:nth-of-type(2) {
-//  margin: 0;
-}
-
-.form-field {
-//  margin: 1rem 0 0 40%;
-  width: 60%;
 }
 
 .form-button {
   background: $black;
   border: 1px solid $black;
   color: white;
-//  float: right;
+  flex-basis: 25%;
   font: 0.9rem/1rem $font;
-//  margin: -2.3rem 0;
   padding: .5rem;
   position: relative;
   text-align: center;
-  width: 5rem;
-}
-
-/* HACK: Placeholders have a height in Firefox, so we must compensate. */
-.form-button, x:-moz-any-link {
-//  margin: -2.1rem -1.1rem;
+  width: 25%;
 }
 
 //
@@ -121,12 +77,12 @@
 //
 
 @media screen and (min-width: 50em) {
-  .form-label {
-//    margin: 0 0 1rem 60%;
+  .form-wrapper {
+    width: 80%;
   }
   
-  .form-field {
-//    margin: 1rem 0 0 60%;
+  .form-controls {
+    margin-left: 60%;
     width: 40%;
   }
 }

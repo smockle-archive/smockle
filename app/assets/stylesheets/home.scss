@@ -14,21 +14,19 @@
 // #ABOUT
 //
   
-#about {
-  .flex-title {
-    margin-bottom: 0;
-  }
+#about .flex-title {
+  margin-bottom: 0;
+}
   
-  .flex-content h4 {
-    font-size: 1.6rem;
-    margin-bottom: .5rem;
-    text-align: left;
-  }
-    
-  .flex-content i {
-    color: $red;
-    transition: color .2s linear;
-  }
+#about .flex-content h4 {
+  font-size: 1.6rem;
+  margin-bottom: .5rem;
+  text-align: left;
+}
+
+#about .flex-content i {
+  color: $red;
+  transition: color .2s linear;
 }
   
 //
