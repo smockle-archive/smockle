@@ -1,21 +1,23 @@
 <main id="project" class="section section--white">
-    <div class="section-wrapper">
-        <h3 class="section-title"><%= @project.name %></h3>
-        <h4 class="section-subtitle"><%= @project.client %></h4>
+    <div class="flex">
+        <hgroup class="project-titles">
+          <h3 class="flex-title"><%= @project.name %></h3>
+          <h4 class="flex-subtitle"><%= @project.client %></h4>
+        </hgroup>
           
-        <div class="section-third">
+        <div class="flex-content">
           <blockquote>"<%= @project.quote %>"</blockquote>
         </div>
           
-        <div class="section-third">
+        <div class="flex-content">
           <p><%= @description[0] %></p>
         </div>
           
-        <div class="section-third">
+        <div class="flex-content">
           <p><%= @description[1] %></p>
         </div>
           
-        <div class="section-third section-third--quadruple">
+        <div class="flex-content project-preview">
           <a href="<%= @project.link %>"><div class="image i<%= @project.id %>" data-id="<%= @project.id %>"></div></a>
         </div>
     </div>
