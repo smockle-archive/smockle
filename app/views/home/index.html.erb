@@ -76,10 +76,10 @@
 </section>
 
 <section id="contact" class="section">
-    <div class="section-wrapper">
-        <h3 class="section-title">Contact me! Talk about a project, or just say hello.</h3>
+    <div class="section-wrapper flex">
+        <h3 class="flex-title">Contact me! Talk about a project, or just say hello.</h3>
         
-        <div class="section-third section-third--triple">
+        <div class="form-wrapper">
           <ul class="loading hidden">
             <li class="loading-spinlet"></li>
             <li class="loading-spinlet"></li>
@@ -91,16 +91,13 @@
           
           <%= form_for @message, :class => "form", :url => { :action => "mail", :controller => "home" }, :method => :post do |f| %>
             <%= f.text_area :content, :class => "form-textarea", :placeholder => "Your message. You could describe a project you'd like to work on, or you could ask more about my work. I can't wait to hear from you!" %>
-              
-            <label class="form-label">
-              Sincerely,<br>
+            
+          <div class="form-controls">
+              <span>Sincerely,</span>
               <%= f.text_field :name, :class => "form-field", :placeholder => "Your name." %>
-            </label>
-              
-            <label class="form-label">
               <%= f.text_field :email, :class => "form-field", :placeholder => "Your email." %>
               <button type="button" class="form-button">Send</button>
-            </label>
+          </div>
           <% end %>
         </div>
       </div>
