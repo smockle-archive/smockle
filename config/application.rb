@@ -62,5 +62,8 @@ module Smockle
     
     # Enable custom error pages.
     config.exceptions_app = self.routes
+    
+    config.rakismet.key = Figaro.env.AKISMET_KEY
+    config.rakismet.url = 'http://www.smockle.com/'
   end
 end

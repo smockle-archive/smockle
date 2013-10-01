@@ -32,6 +32,7 @@ gem "rails_12factor"
 
 # Mailings
 gem "mail"
+gem "rakismet"
 
 # Metrics
 gem "newrelic_rpm"

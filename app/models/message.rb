@@ -1,4 +1,5 @@
 class Message < ActiveRecord::Base
+  include Rakismet::Model
   include ActiveModel::ForbiddenAttributesProtection
 
   validates_presence_of :name, :content
