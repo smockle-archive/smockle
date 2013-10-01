@@ -16,6 +16,7 @@ gem "uglifier", ">= 1.3.0"
 gem "jquery-rails"
 gem "asset_sync"
 gem "autoprefixer-rails"
+gem "modernizr-rails"
 
 # APIs
 gem "twitter"

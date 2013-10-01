@@ -1,16 +1,11 @@
 //
-// FLEX
+// .FLEX
 //
 
 .flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-
-/* HACK: Firefox doesn't support flex-wrap, so we must compensate. */
-.flex, x:-moz-any-link {
-  display: block;
 }
 
 .flex-title {
@@ -23,14 +18,22 @@
   width: 100%;
 }
 
-/* HACK: Firefox doesn't support flex-wrap, so we must compensate. */
-.flex-content, x:-moz-any-link {
-  display: inline-block;
-  vertical-align: top;
-}
-
 .flex-content p {
   text-align: left;
+}
+
+//
+// .NO-FLEXWRAP
+// HACK: Firefox doesn't support flex-wrap, so we must compensate.
+//
+
+.no-flexwrap .flex {
+  display: block;
+}
+
+.no-flexwrap .flex-content {
+  display: inline-block;
+  vertical-align: top;
 }
 
 //
@@ -43,23 +46,30 @@
     width: 30.5%;
   }
   
-  /* HACK: Firefox doesn't support flex-wrap, so we must compensate. */
-  .flex-content:nth-of-type(3n+1), x:-moz-any-link {
-    margin-right: 3.3%;
-  }
-  
-  /* HACK: Firefox doesn't support flex-wrap, so we must compensate. */
-  .flex-content:nth-of-type(3n+2), x:-moz-any-link {
-    margin-right: 3.3%;
-  }
-  
   .flex-double {
     max-width: 65.3%;
     width: 65.3%;
   }
+}
+
+//
+// MEDIA QUERIES .NO-FLEXWRAP
+// HACK: Firefox doesn't support flex-wrap, so we must compensate.
+//
+
+@media screen and (min-width: 50em) {
+  /* HACK: Firefox doesn't support flex-wrap, so we must compensate. */
+  .no-flexwrap .flex-content:nth-of-type(3n+1) {
+    margin-right: 3.3%;
+  }
   
   /* HACK: Firefox doesn't support flex-wrap, so we must compensate. */
-  .flex-double:nth-of-type(3n+2), x:-moz-any-link {
+  .no-flexwrap .flex-content:nth-of-type(3n+2) {
+    margin-right: 3.3%;
+  }
+  
+  /* HACK: Firefox doesn't support flex-wrap, so we must compensate. */
+  .no-flexwrap .flex-double:nth-of-type(3n+2) {
     margin-right: 0%;
   }
 }
