@@ -26,18 +26,8 @@
   flex-wrap: wrap;
 }
 
-/* HACK: Firefox doesn't support flex-wrap, so we must compensate. */
-.form-controls, x:-moz-any-link {
-  display: block;
-}
-
 .form-label {
   padding-bottom: 1rem;
-}
-
-/* HACK: Firefox doesn't support flex-wrap, so we must compensate. */
-.form-label, x:-moz-any-link {
-  display: block;
 }
 
 .form-field,
@@ -55,11 +45,6 @@
   width: 75%;
 }
 
-/* HACK: Firefox doesn't support flex-wrap, so we must compensate. */
-.form-field:nth-of-type(2), x:-moz-any-link {
-  width: 100%;
-}
-
 .form-button {
   background: $black;
   border: 1px solid $black;
@@ -70,6 +55,23 @@
   position: relative;
   text-align: center;
   width: 25%;
+}
+
+//
+// .NO-FLEXWRAP
+// HACK: Firefox doesn't support flex-wrap, so we must compensate.
+//
+
+.no-flexwrap .form-controls {
+  display: block;
+}
+
+.no-flexwrap .form-label {
+  display: block;
+}
+
+.no-flexwrap .form-field:nth-of-type(2) {
+  width: 100%;
 }
 
 //
