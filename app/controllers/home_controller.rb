@@ -1,4 +1,4 @@
-class HomeController < ApplicationController  
+class HomeController < ApplicationController
   def index
     @projects = Project.all.sort_by { |h| h[:bar] }.reverse!
     @message = Message.new
