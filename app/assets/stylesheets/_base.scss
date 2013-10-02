@@ -69,7 +69,9 @@ input, x:-moz-any-link {
 /* HACK: Placeholders have a height in Internet Explorer, so we must compensate. */
 input {
   height: 2rem\9;
+  height/*\**/: 2rem\9;
   padding: 0 1rem\9;
+  padding/*\**/: 0 1rem\9;
 }
 
 /* HACK: Placeholders have a height in Firefox, so we must compensate. */
