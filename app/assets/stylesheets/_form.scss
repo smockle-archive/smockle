@@ -45,6 +45,14 @@
   width: 75%;
 }
 
+/* HACK: Placeholders have a height in Internet Explorer, so we must compensate. */
+@media screen and (min-width:0\0) {
+  .form-field:nth-of-type(2) {
+    flex-basis: 100%;
+    width: 100%;
+  }
+}
+
 .form-button {
   background: $black;
   border: 1px solid $black;
