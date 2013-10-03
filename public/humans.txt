@@ -21,6 +21,7 @@ Github
 Heroku
 HTTParty
 Memcachier
+Modernizr
 New Relic
 Papertrailapp
 Postgres
@@ -30,4 +31,4 @@ Unicorn
 
 /* INSTRUCTIONS */
 
-Preheat Heroku to 450. Measure three cups of Rails and AngularJS code into a large glass Github repo. Slowly add Autoprefixer, Dalli, Figaro, HTTParty, Memcachier, Postgres and Rakismet while stirring constantly. Push code to Heroku. Check after 12-15 minutes using New Relic and Papertrailapp. Serve warm with Unicorn.
+Preheat Heroku to 450. Measure three cups of Rails and AngularJS code into a large glass Github repo. Slowly add Autoprefixer, Dalli, Figaro, HTTParty, Memcachier, Modernizr, Postgres and Rakismet while stirring constantly. Push code to Heroku. Check after 12-15 minutes using New Relic and Papertrailapp. Serve warm with Unicorn.
