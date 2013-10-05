@@ -11,8 +11,8 @@
     <link href="//fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <%= stylesheet_link_tag "application", :media => "all" %>
     
+    <%= jquery_include_tag :google, :defer => true %>
     <script defer src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
-    <%= javascript_include_tag :jquery, :defer => true %>
     <%= javascript_include_tag :modernizr, :defer => true %>
     <%= javascript_include_tag "application", :defer => true %>
     
