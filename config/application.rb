@@ -53,6 +53,12 @@ module Smockle
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
     
+    # Enable custom error pages.
+    config.exceptions_app = self.routes
+    
+    config.assets.precompile += ['jquery.js']
+    
+    # Access Twitter API
     Twitter.configure do |config|
       config.consumer_key = Figaro.env.TWITTER_CONSUMER_KEY
       config.consumer_secret = Figaro.env.TWITTER_CONSUMER_SECRET
@@ -60,9 +66,7 @@ module Smockle
       config.oauth_token_secret = Figaro.env.TWITTER_AUTH_SECRET
     end
     
-    # Enable custom error pages.
-    config.exceptions_app = self.routes
-    
+    # Access Akismet API
     config.rakismet.key = Figaro.env.AKISMET_KEY
     config.rakismet.url = 'http://www.smockle.com/'
   end
