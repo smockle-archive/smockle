@@ -61,7 +61,7 @@ class Feed
     Rails.cache.fetch("stackoverflow", :expires_in => 10.minutes) do
       question = HTTParty.get("https://api.stackexchange.com/2.1/me/favorites",
                 :query => {
-                  :pagesize => "100",
+                  :min => (Time.now - (60*60*24*7)).to_i,
                   :order => "desc",
                   :sort => "added",
                   :site => "stackoverflow",
