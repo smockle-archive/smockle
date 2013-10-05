@@ -9,10 +9,12 @@
     <%= csrf_meta_tags %>
       
     <link href="//fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <%= stylesheet_link_tag    "application", :media => "all" %>
-    <%= javascript_include_tag :modernizr, :defer => "defer" %>
-    <script defer src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
-    <%= javascript_include_tag "application", :defer => "defer" %>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    
+    <script defer src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+    <%= javascript_include_tag :jquery, :defer => true %>
+    <%= javascript_include_tag :modernizr, :defer => true %>
+    <%= javascript_include_tag "application", :defer => true %>
     
     <!-- For third-generation iPad with high-resolution Retina display: -->
     <!-- Size should be 152 x 152 pixels -->
