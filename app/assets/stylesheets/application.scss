@@ -9,7 +9,6 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= depend_on _normalize.scss
  *= depend_on _fontello.scss
  *= depend_on _base.scss
  *= depend_on _section.scss
@@ -21,12 +20,6 @@
  *= depend_on home.scss
  *= depend_on errors.scss
  */
-
-//
-// NORMALIZE
-//
-
-@import "_normalize";
 
 //
 // COLORS
