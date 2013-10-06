@@ -65,11 +65,6 @@ GEM
       multi_json (~> 1.0)
       multi_xml (>= 0.5.2)
     i18n (0.6.5)
-    jquery-rails (3.0.4)
-      railties (>= 3.0, < 5.0)
-      thor (>= 0.14, < 2.0)
-    jquery-rails-cdn (1.0.1)
-      jquery-rails
     kgio (2.8.1)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -168,8 +163,6 @@ DEPENDENCIES
   dalli
   figaro
   httparty
-  jquery-rails
-  jquery-rails-cdn
   mail
   memcachier
   modernizr-rails

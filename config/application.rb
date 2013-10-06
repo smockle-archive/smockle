@@ -56,8 +56,6 @@ module Smockle
     # Enable custom error pages.
     config.exceptions_app = self.routes
     
-    config.assets.precompile += ['jquery.js']
-    
     # Access Twitter API
     Twitter.configure do |config|
       config.consumer_key = Figaro.env.TWITTER_CONSUMER_KEY
