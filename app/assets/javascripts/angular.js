@@ -8,7 +8,8 @@ NG_SMOCKLE.controller("feeds", ["$scope", "$http", function ($scope, $http) {
     
     $http({
         url: "/home/feeds",
-        method: "GET"
+        method: "GET",
+        headers: { "X-Requested-With": "XMLHttpRequest" }
     }).success(function (data, status, headers, config) {
         $scope.twitter = data.twitter;
         $scope.stackoverflow = data.stackoverflow;
