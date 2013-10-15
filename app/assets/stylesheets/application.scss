@@ -48,7 +48,11 @@ $font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 // SELECTION
 //
 
-::selection,
+::selection {
+	color: white;
+	background: $red;
+}
+
 ::-moz-selection {
 	color: white;
 	background: $red;
