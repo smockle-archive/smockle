@@ -59,15 +59,20 @@ class Feed
 
   def self.stackoverflow
     Rails.cache.fetch("stackoverflow", :expires_in => 10.minutes) do
-      question = HTTParty.get("https://api.stackexchange.com/2.1/me/favorites",
-                :query => {
-                  :min => (Time.now - (60*60*24*7)).to_i,
-                  :order => "desc",
-                  :sort => "added",
-                  :site => "stackoverflow",
-                  :access_token => Figaro.env.STACKOVERFLOW_ACCESS_TOKEN,
-                  :key => Figaro.env.STACKOVERFLOW_KEY
-                })["items"].last
+      for i in 1..52
+        question = HTTParty.get("https://api.stackexchange.com/2.1/me/favorites",
+                  :query => {
+                    :min => (Time.now - (60*60*24*7*i)).to_i,
+                    :order => "desc",
+                    :sort => "added",
+                    :site => "stackoverflow",
+                    :access_token => Figaro.env.STACKOVERFLOW_ACCESS_TOKEN,
+                    :key => Figaro.env.STACKOVERFLOW_KEY
+                  })["items"].last
+        if question != nil then
+          break
+        end
+      end
       "<a href=\"" + question["link"].html_safe + "\">Question</a>: " + question["title"].html_safe
     end
   end
