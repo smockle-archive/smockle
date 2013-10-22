@@ -12,23 +12,23 @@
 //
 //= require_tree .
 
-/*jslint browser: true */
+/*jshint browser: true, asi: true */
 /*global $: true */
 
 // Using the Garber-Irish method:
 // http://viget.com/inspire/extending-paul-irishs-comprehensive-dom-ready-execution
 
-var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {});
+var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {})
  
 var UTIL = {
     exec: function (controller, action) {
         "use strict";
         
-        var ns = SMOCKLE;
-        action = (action === undefined) ? "init" : action;
+        var ns = SMOCKLE
+        action = (action === undefined) ? "init" : action
  
         if (controller !== "" && ns[controller] && typeof ns[controller][action] === "function") {
-            ns[controller][action]();
+            ns[controller][action]()
         }
     },
  
@@ -37,12 +37,12 @@ var UTIL = {
         
         var body = document.body,
             controller = body.getAttribute("data-controller"),
-            action = body.getAttribute("data-action");
+            action = body.getAttribute("data-action")
  
-        UTIL.exec("common");
-        UTIL.exec(controller);
-        UTIL.exec(controller, action);
+        UTIL.exec("common")
+        UTIL.exec(controller)
+        UTIL.exec(controller, action)
     }
 };
 
-$(document).ready(UTIL.init);
+$(document).ready(UTIL.init)

@@ -1,7 +1,7 @@
-/*jslint browser: true, devel: true */
+/*jshint browser: true, asi: true */
 /*global angular: true, $http: true */
 
-var NG_SMOCKLE = angular.module("NG_SMOCKLE", []);
+var NG_SMOCKLE = angular.module("NG_SMOCKLE", [])
 
 NG_SMOCKLE.controller("feeds", ["$scope", "$http", function ($scope, $http) {
     "use strict";
@@ -11,9 +11,9 @@ NG_SMOCKLE.controller("feeds", ["$scope", "$http", function ($scope, $http) {
         method: "GET",
         headers: { "X-Requested-With": "XMLHttpRequest" }
     }).success(function (data, status, headers, config) {
-        $scope.twitter = data.twitter;
-        $scope.stackoverflow = data.stackoverflow;
-        $scope.github = data.github;
-        $scope.instagram = data.instagram;
-    });
-}]);
+        $scope.twitter = data.twitter
+        $scope.stackoverflow = data.stackoverflow
+        $scope.github = data.github
+        $scope.instagram = data.instagram
+    })
+}])

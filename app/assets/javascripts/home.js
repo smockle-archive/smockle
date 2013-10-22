@@ -7,7 +7,7 @@
  * Copyright © 2013 Clay Miller (clay@smockle.com)
  */
 
-/*jslint browser: true, devel: true, bitwise: true */
+/*jshint browser: true, devel: true, asi: true */
 /*global $: true */
 var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
     home: {
@@ -18,15 +18,15 @@ var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
             // Last section id.
             var logo = $(".site-logo"),
                 lid,
-                sections;
-            logo.removeAttr("href");
-            logo.children("h1").css("color", "white");
-	  
+                sections
+            logo.removeAttr("href")
+            logo.children("h1").css("color", "white")
+            
             // Collection of sections.
             sections = $("nav a").map(function () {
-                var item = $($(this).attr("href"));
-                if (item.length) { return item; }
-            });
+                var item = $($(this).attr("href"))
+                if (item.length) { return item }
+            })
   
             // Update section on scroll.
             function scroll() {
@@ -37,49 +37,49 @@ var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
                             return this;
                         }
                     }),
-                    id;
+                    id
                 
-                c = c[c.length - 1];
-                id = c && c.length ? c[0].id : "";
+                c = c[c.length - 1]
+                id = c && c.length ? c[0].id : ""
                 
                 if (id !== lid) {
-                    lid = id;
-                    $("nav a").removeClass("active");
-                    $("nav a[href=#" + id + "]").addClass("active");
+                    lid = id
+                    $("nav a").removeClass("active")
+                    $("nav a[href=#" + id + "]").addClass("active")
                     
                     if (lid === "contact") {
-                        $("#contact textarea").focus();
+                        $("#contact textarea").focus()
                     } else {
-                        $("#contact textarea").blur();
+                        $("#contact textarea").blur()
                     }
                 }
             }
-            $(window).on("scroll", scroll);
+            $(window).on("scroll", scroll)
             
             // Jump to section on click.
             function click(e) {
-                $(window).off("scroll");
-                if (!e) { e = window.event; }
-                e.preventDefault();
+                $(window).off("scroll")
+                if (!e) { e = window.event }
+                e.preventDefault()
                 
                 var h = e.target.href,
                     r = h.substring(h.indexOf("#")),
                     a = $(r)[0].offsetTop,
                     b = $("header")[0].scrollHeight - 4,
-                    c = a - b > 0 ? a - b : 0;
+                    c = a - b > 0 ? a - b : 0
                 
-                $("nav a").removeClass("active");
-                $(e.target).addClass("active");
+                $("nav a").removeClass("active")
+                $(e.target).addClass("active")
                 
                 if (~h.indexOf("#contact")) {
-                    $("#contact textarea").focus();
+                    $("#contact textarea").focus()
                 } else {
-                    $("#contact textarea").blur();
+                    $("#contact textarea").blur()
                 }
                 
-                $("html, body").stop().animate({ scrollTop: c }, 600, function () { $(window).on("scroll", scroll); });
+                $("html, body").stop().animate({ scrollTop: c }, 600, function () { $(window).on("scroll", scroll) })
             }
-            $(document).on("click", "nav a", click);
+            $(document).on("click", "nav a", click)
           
             // Submit link.
             $("#contact .form-button").on("click", function () {
@@ -87,13 +87,13 @@ var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
                     values = form.serialize(),
                     button = $("#contact .form-button"),
                     loading = $("#contact .loading"),
-                    contents = $("#contact h4, #contact form");
+                    contents = $("#contact h4, #contact form")
               
-                button.attr("disabled", true);
-                loading.removeClass("hidden");
-                contents.toggle();
+                button.attr("disabled", true)
+                loading.removeClass("hidden")
+                contents.toggle()
                 
-                $("#contact").css("min-height", "0");
+                $("#contact").css("min-height", "0")
               
                 $.ajax({
                     url: form.attr("action"),
@@ -101,24 +101,24 @@ var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
                     data: values,
                     type: "POST",
                     success: function (data) {
-                        loading.addClass("hidden");
-                        contents.hide();
-                        $("#contact h4").text(data.message).css("text-align", "center").show();
+                        loading.addClass("hidden")
+                        contents.hide()
+                        $("#contact h4").text(data.message).css("text-align", "center").show()
                     },
                     error: function (data) {
-                        button.attr("disabled", false);
-                        loading.addClass("hidden");
-                        contents.toggle();
-                        var errors = $.parseJSON(data.responseText);
+                        button.attr("disabled", false)
+                        loading.addClass("hidden")
+                        contents.toggle()
+                        var errors = $.parseJSON(data.responseText)
                         
                         if (errors.content !== undefined) {
-                            $("#contact textarea").attr("placeholder", "Content " + errors.content + ".");
+                            $("#contact textarea").attr("placeholder", "Content " + errors.content + ".")
                         }
                         if (errors.name !== undefined) {
-                            $("#contact label:nth-of-type(1) input").attr("placeholder", "Name " + errors.name + ".");
+                            $("#contact label:nth-of-type(1) input").attr("placeholder", "Name " + errors.name + ".")
                         }
                         if (errors.email !== undefined) {
-                            $("#contact label:nth-of-type(2) input").attr("placeholder", "Email " + errors.email + ".");
+                            $("#contact label:nth-of-type(2) input").attr("placeholder", "Email " + errors.email + ".")
                         }
                     }
                 });
@@ -129,11 +129,11 @@ var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
             "use strict";
             
             // Error pages only have one section, so disable scrolling.
-            $(document).off("click", "nav a");
+            $(document).off("click", "nav a")
       
             // Linkify navigation.
             $("nav a").each(function () {
-                $(this).attr("href", "/" + $(this).attr("href"));
+                $(this).attr("href", "/" + $(this).attr("href"))
             });
         }
     }
