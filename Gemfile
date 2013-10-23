@@ -16,6 +16,7 @@ gem "uglifier", ">= 1.3.0"
 gem "asset_sync"
 gem "autoprefixer-rails"
 gem "modernizr-rails"
+gem "black_coffee", :github => "smockle/black-coffee"
 
 # APIs
 gem "twitter"
