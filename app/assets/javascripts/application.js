@@ -12,7 +12,7 @@
 //
 //= require_tree .
 
-/*jshint browser: true, asi: true */
+/*jshint bitwise: true, curly: true, eqeqeq: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, noarg: true, noempty: true, nonew: true, quotmark: double, undef: true, unused: vars, strict: true, trailing: true, maxdepth: 3, browser: true, asi: true */
 /*global $: true */
 
 // Using the Garber-Irish method:
@@ -45,4 +45,4 @@ var UTIL = {
     }
 };
 
-$(document).ready(UTIL.init)
+$.ready(UTIL.init)
