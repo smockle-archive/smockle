@@ -9,6 +9,7 @@
 
 /*jshint bitwise: true, curly: true, eqeqeq: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, noarg: true, noempty: true, nonew: true, quotmark: double, undef: true, unused: vars, strict: true, trailing: true, maxdepth: 3, browser: true, devel: true, asi: true */
 /*global _: true */
+
 var SMOCKLE = _.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
     home: {
         index: function () {
@@ -33,7 +34,7 @@ var SMOCKLE = _.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
                 
                 document.querySelector("#contact").css("min-height", "0")
               
-                $.ajax({
+                _.ajax({
                     url: form.attr("action"),
                     dataType: "json",
                     data: values,
@@ -41,22 +42,22 @@ var SMOCKLE = _.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
                     success: function (data) {
                         loading.addClass("hidden")
                         contents.hide()
-                        $("#contact h4").text(data.message).css("text-align", "center").show()
+                        document.querySelector("#contact h4").text(data.message).css("text-align", "center").show()
                     },
                     error: function (data) {
                         button.attr("disabled", false)
                         loading.addClass("hidden")
                         contents.toggle()
-                        var errors = $.parseJSON(data.responseText)
+                        var errors = JSON.parse(data.responseText)
                         
                         if (errors.content !== undefined) {
-                            $("#contact textarea").attr("placeholder", "Content " + errors.content + ".")
+                            document.querySelector("#contact textarea").attr("placeholder", "Content " + errors.content + ".")
                         }
                         if (errors.name !== undefined) {
-                            $("#contact label:nth-of-type(1) input").attr("placeholder", "Name " + errors.name + ".")
+                            document.querySelector("#contact label:nth-of-type(1) input").attr("placeholder", "Name " + errors.name + ".")
                         }
                         if (errors.email !== undefined) {
-                            $("#contact label:nth-of-type(2) input").attr("placeholder", "Email " + errors.email + ".")
+                            document.querySelector("#contact label:nth-of-type(2) input").attr("placeholder", "Email " + errors.email + ".")
                         }
                     }
                 })
@@ -70,9 +71,9 @@ var SMOCKLE = _.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {
             // Error pages only have one section, so disable scrolling.
       
             // Linkify navigation.
-            document.querySelectorAll("nav a").each(function () {
-                $(this).attr("href", "/" + $(this).attr("href"))
-            });
+            document.querySelectorAll("nav a").forEach(function (link) {
+                link.setAttribute("href", link.getAttribute("href"))
+            })
         }
     }
-});
+})

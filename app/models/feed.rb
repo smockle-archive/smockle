@@ -79,7 +79,15 @@ class Feed
   
   def self.twitter
     Rails.cache.fetch("twitter", :expires_in => 10.minutes) do
-      Twitter::Autolink.auto_link(Twitter.user("smockled").status.text, { :username_include_symbol => true })
+      # Access Twitter API
+      client = Twitter::REST::Client.new do |config|
+        config.consumer_key = Figaro.env.TWITTER_CONSUMER_KEY
+        config.consumer_secret = Figaro.env.TWITTER_CONSUMER_SECRET
+        config.access_token = Figaro.env.TWITTER_ACCESS_TOKEN
+        config.access_token_secret = Figaro.env.TWITTER_ACCESS_SECRET
+      end
+      status = "" + client.user("smockled").status.text
+      Twitter::Autolink.auto_link(status, { :username_include_symbol => true })
     end
   end
 end

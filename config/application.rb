@@ -4,7 +4,7 @@ require 'rails/all'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
-  #Bundler.require(*Rails.groups(:assets => %w(development test)))
+  # Bundler.require(*Rails.groups(:assets => %w(development test)))
   # If you want your assets lazily compiled in production, use this line
   Bundler.require(:default, :assets, Rails.env)
 end
@@ -55,14 +55,6 @@ module Smockle
     
     # Enable custom error pages.
     config.exceptions_app = self.routes
-    
-    # Access Twitter API
-    Twitter.configure do |config|
-      config.consumer_key = Figaro.env.TWITTER_CONSUMER_KEY
-      config.consumer_secret = Figaro.env.TWITTER_CONSUMER_SECRET
-      config.oauth_token = Figaro.env.TWITTER_AUTH_TOKEN
-      config.oauth_token_secret = Figaro.env.TWITTER_AUTH_SECRET
-    end
     
     # Access Akismet API
     config.rakismet.key = Figaro.env.AKISMET_KEY

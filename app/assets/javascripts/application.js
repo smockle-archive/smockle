@@ -14,12 +14,12 @@
 //= require_tree .
 
 /*jshint bitwise: true, curly: true, eqeqeq: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, noarg: true, noempty: true, nonew: true, quotmark: double, undef: true, unused: vars, strict: true, trailing: true, maxdepth: 3, browser: true, asi: true */
-/*global $: true */
+/*global _: true */
 
 // Using the Garber-Irish method:
 // http://viget.com/inspire/extending-paul-irishs-comprehensive-dom-ready-execution
 
-var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {})
+var SMOCKLE = _.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {})
  
 var UTIL = {
     exec: function (controller, action) {
@@ -46,4 +46,4 @@ var UTIL = {
     }
 };
 
-$.ready(UTIL.init)
+_.ready(UTIL.init)
