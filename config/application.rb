@@ -56,14 +56,6 @@ module Smockle
     # Enable custom error pages.
     config.exceptions_app = self.routes
     
-    # Access Twitter API
-    Twitter.configure do |config|
-      config.consumer_key = Figaro.env.TWITTER_CONSUMER_KEY
-      config.consumer_secret = Figaro.env.TWITTER_CONSUMER_SECRET
-      config.oauth_token = Figaro.env.TWITTER_AUTH_TOKEN
-      config.oauth_token_secret = Figaro.env.TWITTER_AUTH_SECRET
-    end
-    
     # Access Akismet API
     config.rakismet.key = Figaro.env.AKISMET_KEY
     config.rakismet.url = 'http://www.smockle.com/'
