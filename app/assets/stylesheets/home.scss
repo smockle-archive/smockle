@@ -30,7 +30,7 @@
 // #PROJECTS
 //
 
-$projects: 9;
+$projects: 12;
 
 @for $n from 1 through $projects {
   #projects div:nth-of-type(#{$n}) .thumbnail-image {
