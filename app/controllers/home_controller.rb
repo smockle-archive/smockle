@@ -12,7 +12,7 @@ class HomeController < ApplicationController
     @message = Message.new(params.require(:message).permit(:name, :email, :content))
     respond_to do |format|
       if @message.valid? and not @message.spam?
-        # Mailbox.contact(@message).deliver
+        Mailbox.contact(@message).deliver
         format.json  { render :json => { :message => "Message sent. Thank you for contacting Smockle!"}, :status => :created }
       else
         format.json  { render :json => @message.errors, :status => :unprocessable_entity }
