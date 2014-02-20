@@ -4,7 +4,7 @@
 
 html {
   background-color: $black;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 body {
@@ -25,7 +25,7 @@ a:hover {
 
 h1 {
   display: block;
-  font: 2.2rem "Pacifico", serif;
+  font: 2.2rem "Pacifico", serif; 
   letter-spacing: .1rem;
 }
 
@@ -55,7 +55,7 @@ i {
 input, select, textarea {
   border: 1px solid $black;
   box-sizing: border-box;
-  font: .9rem/1rem $font;
+  font: 1rem/1.1rem $font;
   height: 2rem;
   padding: 1rem;
 }
@@ -90,7 +90,7 @@ input:focus, select:focus, textarea:focus {
 }
 	
 p, textarea {
-  font: .9rem/1.6rem $font;
+  font: 1rem/1.7rem $font;
 }
 
 p {
@@ -111,7 +111,7 @@ p {
   }
   
   h3 {
-    font: 200 1.8rem $font;
+    font: 200 2rem $font;
   }
 }
 
