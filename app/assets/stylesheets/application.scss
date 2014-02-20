@@ -45,7 +45,7 @@ $max-width: 1008px;
     font-family: "Pacifico";
     font-style: normal;
     font-weight: normal;
-    src: url(pacifico.woff) format("woff");
+    src: asset-url("pacifico.woff?9309851", font) format("woff");
 }
 
 $font: "futura-pt", "Helvetica Neue", Helvetica, Arial, sans-serif;
