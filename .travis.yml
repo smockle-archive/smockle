@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+  - 2.1.0
+notifications:
+  email:
+    recipients:
+      - clay@smockle.com
+    on_success: change # default: change
+    on_failure: always # default: always
