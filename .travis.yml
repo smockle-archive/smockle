@@ -7,6 +7,8 @@ notifications:
     - clay@smockle.com
     on_success: change
     on_failure: always
+before_script:
+  - openssl aes-256-cbc -k "$secret" -in config/application.yml.enc -d -a -out config/application.yml
 env:
   global:
-    secure: D6HtnnJJPBugywpXk3mGVFPoTJIW6r8FQK0QLgNUv6t0itISUAXrfPXRCAxx8Ffn36kyZ39MUupvHYC9gxvtG/ezeIJqthuv2JEX5OWtGQzpGF2eG8cM+7n4LyeQtrZNn+uMdRyK7+c2z6HprtePhZylPUOlBmiTfCMW1KM5bC8=
+    secure: INqm1jBkkku9Zm0J/GlB4XIGI4R2KhaszX83EF4k8WaZUOy3GcYZSUNW4QehuTMGdZMR5hlW2PfbgRQgaSLYG8waR73bNbTbnDWWirG6bM+mADX//1nfg8HkzXdC9FzH5HAMOoJqm4TQUw8yW4k5UQi/4esLOwLTpVEVTwAX+8M=
