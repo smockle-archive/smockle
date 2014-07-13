@@ -40,3 +40,5 @@ gem "newrelic_rpm"
 # Server
 gem "unicorn"
 gem "unicorn-rails"
+
+gem "nokogiri", "1.6.1"
