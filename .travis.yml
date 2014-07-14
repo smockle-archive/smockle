@@ -9,8 +9,15 @@ notifications:
     on_failure: always
 addons:
   postgresql: '9.3'
+bundler_args: --without development --path=~/.bundle
+before_install:
+- "echo 'gem: --no-ri --no-rdoc' > ~/.gemrc"
+- gem install bundler bundle_cache
+- bundle_cache_install
 before_script:
 - psql -c 'create database smockle_test;' -U postgres
+after_script:
+- bundle_cache
 env:
   global:
   - secure: DL3EU/8GkoIaqxE2I02i0mKmhFPvIxBVLsBtwXOxYkTnTqjlPhNiMPhoUpK9MAHRF3kyT9W+kO5gq2zOUtaoEApBA0P3arPyi3bQJI1+x160+CpI1prI5Fv9x2vSXHVZxZzuTv/YCLEOQ4TV2Vs61ZWuFtannAHmORTDkw5GL1Y=
