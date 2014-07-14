@@ -8,6 +8,7 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require normalize-rails
  *= require_self
  *= depend_on _fontello.scss
  *= depend_on _base.scss
@@ -41,7 +42,12 @@ $max-width: 1008px;
 // FONTS
 //
 
-@import url(http://fonts.googleapis.com/css?family=Pacifico&text=Smockle.);
+@font-face {
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Pacifico Regular'), local('Pacifico-Regular'), url(http://themes.googleusercontent.com/licensed/font?kit=O3mZboUBgPw6CesoADMXgMHBT0Bfi57OGPM5Ud9orR4) format('truetype');
+}
 
 @font-face {
     font-family: "Pacifico Neue";
