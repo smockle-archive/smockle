@@ -59,6 +59,23 @@ $max-width: 1008px;
 $font: "futura-pt", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @import "_fontello";
 
+.wf-loading {
+    .site-nav,
+    h2,
+    h3,
+    p {
+        visibility: hidden;
+    }
+}
+.wf-active {
+    .site-nav,
+    h2,
+    h3,
+    p {
+        visibility: visible;
+    }   
+}
+
 //
 // SELECTION
 //
