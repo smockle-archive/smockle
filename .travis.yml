@@ -16,10 +16,6 @@ before_install:
 - bundle_cache_install
 before_script:
 - "./script/travis/setup_database.sh &"
-script:
-- RAILS_ENV=test bundle exec rake db:migrate --trace
-- bundle exec rake db:test:prepare
-- bundle exec rake
 after_script:
 - bundle_cache
 env:
