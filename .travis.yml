@@ -7,6 +7,10 @@ notifications:
     - clay@smockle.com
     on_success: change
     on_failure: always
+addons:
+  postgresql: "9.3"
+before_script:
+  - psql -c 'create database smockle_test;' -U postgres
 env:
   global:
   - secure: DL3EU/8GkoIaqxE2I02i0mKmhFPvIxBVLsBtwXOxYkTnTqjlPhNiMPhoUpK9MAHRF3kyT9W+kO5gq2zOUtaoEApBA0P3arPyi3bQJI1+x160+CpI1prI5Fv9x2vSXHVZxZzuTv/YCLEOQ4TV2Vs61ZWuFtannAHmORTDkw5GL1Y=
