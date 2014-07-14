@@ -8,8 +8,6 @@
     <meta name="p:domain_verify" content="adcc5e23e134aa6d1456ff371adb7b3b"/>
     <meta name="viewport" content="width=device-width">
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag "application", :media => "all" %>
     
     <script defer src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>    
     <script defer src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
@@ -69,5 +67,7 @@
         h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
       })(document);
     </script>
+      
+    <%= stylesheet_link_tag "application", :media => "all" %>
   </body>
 </html>
