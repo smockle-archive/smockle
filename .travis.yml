@@ -36,3 +36,11 @@ env:
   - secure: b6fExtv0lEPwon+BdRdIQB69ouOa3S5Y3l5l9f27nelLOMEF7AsNdZuMvFrnhXSbCr9OLbfLqQkeJfs0RznlGtZMGn28b52eKZbVpgZWd+hSakBYP1plge8AF1ARvJSbRrFeC4mdLXYxFw/Zf+c57zt8X6WJyQQNp3HnaaPmAqk=
   - secure: dvmO0WeIVyyEUp+G+L0Tnaga74olFLSloRtfnlCjNS5dT0qZrxBy/ZR2jh/3hkHL8/rjuFJNy3QLiWMRVEDrf1OGij5Yaz86dIMhlM3jbsiB1a7mefAHllqtSfxqceLH1bqfGonpP10gXh854qCu6VvqPt+T/HfetuE7QQSF4aM=
   - secure: HdJmbYXuJxkbIhiffvxeoc3Kh0GL2J8UbsDpwwHHu7T8NtzWZaxp4AydVjwtgr0iYoQX40ytSIyYZffMYis0JASUEygLwj15xvS35H9dazBILTgf4m7DIOCoGlj6gz+RgbMc/fijWDkyYBr7BbaZskFxQqv2T0WvjAyeTkxKOYc=
+deploy:
+  provider: heroku
+  api_key:
+    secure: EgO8JyPz4BXXDeDE/j23XLN0gAX0AzwhrWrH0wcXvs+aIfk3BpOGDGHBGLbBW3T2qcBf/0nIko76ssciFLNG5YFrOhCH+u+H8KpGo5rupm4I6tvrLZqz+Jf6kuih/COhJV6xKnFNGFTvO3+jJ6QpfdyyLjiJaVz5Aritef8C1Qg=
+  app: smockle-staging
+  strategy: git
+  on:
+    repo: smockle/smockle
