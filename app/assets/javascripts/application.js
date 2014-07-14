@@ -16,7 +16,7 @@
 /*global $: true */
 
 // Using the Garber-Irish method:
-// http://viget.com/inspire/extending-paul-irishs-comprehensive-dom-ready-execution
+// http://viget.com/inspire/extending-paul-irishs-comprehensive-dom-ready-execution 
 
 var SMOCKLE = $.extend(typeof SMOCKLE === "undefined" ? {} : SMOCKLE, {})
  
