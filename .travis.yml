@@ -11,7 +11,7 @@ notifications:
 #  postgresql: '9.3'
 before_script:
 - psql -c 'create database smockle_test;' -U postgres
-install: chmod +x script/cached-bundle && script/cached-bundle install --deployment
+install: chmod +x script/* && script/cached-bundle install --deployment
 env:
   global:
   - secure: gNgPShSMnzfvxiSaBq6Vd1AZHymNzNlFx/9F4fAlEk5lvFXwIglRE1IcSypdrOoSi7ri1i3wOnHza0L3Ji4kQ9Fih8xiT8T3Ygvjzjko14GGkOWUoFWHKqRsy55xi/2Yp43LD1S+hI31YFehcPB7bXV7NQ4q/pilrSMlISojf1g=
