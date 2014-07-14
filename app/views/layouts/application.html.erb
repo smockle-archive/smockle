@@ -9,11 +9,19 @@
     <meta name="viewport" content="width=device-width">
     <%= csrf_meta_tags %>
     
+    <noscript class="loadCSS">
+        <%= stylesheet_link_tag "application", :media => "all" %>
+    </noscript>
+      
     <script defer src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>    
     <script defer src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
     <%= javascript_include_tag :modernizr, :defer => true %>
     <%= javascript_include_tag "application", :defer => true %>
-    
+    <script defer>
+        function loadCSS(e,t,n){"use strict";function r(e){var t=window.document.createElement("link");t.rel="stylesheet";t.href=e;return t}function i(e,t){var r=e.media||n||"all";e.media="only x";t.parentNode.insertBefore(e,t);window.setTimeout(function(){e.media=r},1)}var s=t||window.document.getElementsByTagName("script")[0],o=0;if(e){if(e instanceof Array){for(;o<e.length;o++){i(r(e[o]),s)}}else{i(r(e),s)}}else{var u=window.document.getElementsByTagName("noscript");if(u.length){var a=window.document.createElement("div");for(o=0;o<u.length;o++){if((" "+u[o].className+" ").indexOf(" loadCSS ")>-1&&(" "+u[o].className+" ").indexOf(" loaded ")===-1){a.innerHTML+=" "+u[o].innerText;u[o].className+=" loaded "}}var f=a.getElementsByTagName("link");for(o=0;o<f.length;o++){var l=f[o].cloneNode(true);i(l,s)}}}}
+        loadCSS();
+    </script>
+      
     <!-- For third-generation iPad with high-resolution Retina display: -->
     <!-- Size should be 152 x 152 pixels -->
     <%= favicon_link_tag 'apple-touch-icon-152x152-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '152x152' %>
@@ -57,7 +65,5 @@
       <!-- Google Analytics. -->
       <script>(function(G,o,O,g,l){G.GoogleAnalyticsObject=O;G[O]||(G[O]=function(){(G[O].q=G[O].q||[]).push(arguments)});G[O].l=+new Date;g=o.createElement('script'),l=o.scripts[0];g.src='//www.google-analytics.com/analytics.js';l.parentNode.insertBefore(g,l)}(this,document,'ga'));ga('create','UA-37140610-3');ga('send','pageview')</script>
     <% end %>
-      
-    <%= stylesheet_link_tag "application", :media => "all" %>
   </body>
 </html>
