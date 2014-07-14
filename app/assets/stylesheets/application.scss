@@ -43,34 +43,34 @@ $max-width: 1008px;
 //
 
 @font-face {
-    font-family: 'Futura Neue';
-    src: asset-url("futurar.woff?9309851", font) format('woff');
-    font-weight: normal;
+    font-family: 'futura-pt';
     font-style: normal;
+    font-weight: 400;
+    src: local('Futura PT'),
+         local('futura-pt'),
+         asset-url("futura-pt-book.woff?9309851", font) format('woff');
 }
 
 @font-face {
-    font-family: 'Futura Neue';
-    src: asset-url("futural.woff?9309851", font) format('woff');
-    font-weight: 200;
+    font-family: 'futura-pt';
     font-style: normal;
+    font-weight: 200;
+    src: local('Futura PT'),
+         local('futura-pt'),
+         asset-url("futura-pt-light.woff?9309851", font) format('woff');
 }
 
 @font-face {
     font-family: 'Pacifico';
     font-style: normal;
     font-weight: 400;
-    src: local('Pacifico Regular'), local('Pacifico-Regular'), url(http://themes.googleusercontent.com/licensed/font?kit=O3mZboUBgPw6CesoADMXgMHBT0Bfi57OGPM5Ud9orR4) format('truetype');
+    src: local('Pacifico Regular'),
+         local('Pacifico-Regular'),
+         asset-url("pacifico.woff?9309851") format('woff'),
+         asset-url("pacifico.ttf?9309851") format('truetype');
 }
 
-@font-face {
-    font-family: "Pacifico Neue";
-    font-style: normal;
-    font-weight: normal;
-    src: asset-url("pacifico.woff?9309851", font) format("woff");
-}
-
-$font: "Futura Neue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font: "futura-pt", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @import "_fontello";
 
 //
