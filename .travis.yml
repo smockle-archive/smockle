@@ -15,7 +15,7 @@ before_install:
 - gem install bundler bundle_cache
 - bundle_cache_install
 before_script:
-- "./script/travis/setup_database.sh &"
+- psql -c 'create database smockle_test;' -U postgres
 after_script:
 - bundle_cache
 env:
