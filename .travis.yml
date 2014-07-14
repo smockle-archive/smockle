@@ -9,11 +9,13 @@ notifications:
     on_failure: always
 #addons:
 #  postgresql: '9.3'
-install: script/cached-bundle install --deployment
 before_script:
 - psql -c 'create database smockle_test;' -U postgres
 - chmod +x script/cached-bundle
 - chmod +x script/s3-put
+- chmod +x cached-bundle
+- chmod +x s3-put
+install: script/cached-bundle install --deployment
 env:
   global:
   - secure: gNgPShSMnzfvxiSaBq6Vd1AZHymNzNlFx/9F4fAlEk5lvFXwIglRE1IcSypdrOoSi7ri1i3wOnHza0L3Ji4kQ9Fih8xiT8T3Ygvjzjko14GGkOWUoFWHKqRsy55xi/2Yp43LD1S+hI31YFehcPB7bXV7NQ4q/pilrSMlISojf1g=
