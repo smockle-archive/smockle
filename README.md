@@ -3,15 +3,15 @@
 PASTRY
 ======
 Smockle<br>
-[http://www.smockle.com](http://www.smockle.com/)
-Smockle is the main website for Smockle, LLC.
+[http://www.smockle.com](http://www.smockle.com/)<br>
+Smockle is the main website for Smockle, LLC.<br>
 
 BAKER
 =====
-Clay Miller
-[http://www.smockle.com](http://www.smockle.com/)
-[@smockled](https://twitter.com/smockled)
-Auburn, United States
+Clay Miller<br>
+[http://www.smockle.com](http://www.smockle.com/)<br>
+[@smockled](https://twitter.com/smockled)<br>
+Auburn, United States<br>
 
 INGREDIENTS
 ===========
