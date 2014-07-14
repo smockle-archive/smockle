@@ -59,5 +59,7 @@ module Smockle
     # Access Akismet API
     config.rakismet.key = Figaro.env.AKISMET_KEY
     config.rakismet.url = 'http://www.smockle.com/'
+      
+    config.middleware.use Rack::Deflater
   end
 end
