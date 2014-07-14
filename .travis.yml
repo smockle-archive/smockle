@@ -32,10 +32,5 @@ env:
   - secure: V4Ci9k/8fAAxx7QHZA9MUx7HFdMpG9m3N89k0OwfKtdOMov7z31buHo796e8gkcEyg1VrNYZ8aaQoETALrJUL2RcNWXKWUBMIw+AX7YDLl0YMOFs2T+hkjzXmzVTxZx1hxbo7BuCOzThscZbv2C9VF6cgqEoAV5nwKsrH10GZC8=
   - secure: fox+KlXUCLMu2fAuZ5e26j4hA41IaLN6sqMSegVqG7cQLkUyrFZv6owQMlC+eDrca9Zpt22CwzxNkXtpR9y8yDNkTqtpbVBPjeVCRHLTISdUbYQtZjiRNpC1UXMJxA2lXDBym6tE3L4fUg7W5ogj5+Uy6ledDuqluQgUYT+3qXA=
   - secure: U05WjALR3XpEeTgiz425I95Aa+e9/bcZ444IC/bp9hDqMkjtOymqgUXUiT+MEunIdIoGIRlJCH//wlbPsXZDJFO6ELw3XUJ/GO3DUDYhpevUnxoqIaJmhCrDJ5QCmZ/udIq2WN2m96CvD7YgezjqpFqc84fuE9y4Tn+w5wZso6U=
-#deploy:
-#  provider: heroku
-#  api_key:
-#    secure: MyWHEvs1ITMe1DyQObgp5HpRx+0j4OL8j+tKirnY6RWaNfQwicHwidOyzwCqR6r7a6gJRxXR8hXHg8ZeH495txRRfXUhTP73PZxagaj3hSnRtCrelRIgB+TM0a60xT39Bbq6oyikb5pses+mMaM2S9l8Tdr7lG1A05QJO9AwjNY=
-#  app: smockle-staging
-#  on:
-#    repo: smockle/smockle
+  - secure: TDbOfy9mny36SBGfaJpcbvyu6QNT6j38V24j59YGtpsP08TEzIc/gnL/lUJOv1e0w0+A40AtFFXkx+9Jm0jMkfGnYOnON1AXDqOt7I1LzNWr0/pLyOeXbnYUqAlEw+hA9fBy+riIS/6lXVpR0npxndz3AZMIZ5kJhKZIxNN4el8=
+  - secure: gioKJJ2NBJu+U5gHYOldLBwSiQC2I9iRvphFkf2HnG1uaWooJABZ7hfqt5JH0oWJ20EJ+V2KNBT0g6VcWY3YLAgpfEaJBZW527fhlmWuPyr/5Eh8kD2Pmz10Ls1OrlJ8mArOEIyRS8othA0Wf9GRJ1b2WmHsuB1wJzTSRV3dLy0=
