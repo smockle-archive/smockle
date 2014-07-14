@@ -26,7 +26,6 @@ gem "figaro"
 # Caches
 gem "memcachier"
 gem "dalli"
-gem "bundle_cache", :group => :development
 
 # Deployment
 gem "rails_12factor"
