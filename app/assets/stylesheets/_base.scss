@@ -25,7 +25,7 @@ a:hover {
 
 h1 {
   display: block;
-  font: 2.2rem "Pacifico", $font; 
+  font: 2.2rem "Pacifico", $font;
   letter-spacing: .1rem;
 }
 
@@ -33,25 +33,25 @@ h2 {
   font: 200 2.4rem/3.4rem $font;
   margin: 0 0 1rem 0;
 }
-	
+
 h3 {
   font: 200 1.6rem $font;
   margin: 0 0 2rem 0;
   text-align: center;
 }
-	
+
 h4 {
   font: 200 1.2rem $font;
   margin: 0 0 1rem 0;
   text-align: center;
 }
-	
+
 i {
   display: block;
   font-size: 9rem;
   text-align: center;
 }
-	
+
 input, select, textarea {
   border: 1px solid $black;
   box-sizing: border-box;
@@ -59,7 +59,7 @@ input, select, textarea {
   height: 2rem;
   padding: 1rem;
 }
-  
+
 /* HACK: Placeholders have a height in Firefox, so we must compensate. */
 input, x:-moz-any-link {
   height: 2rem;
@@ -84,11 +84,11 @@ textarea, x:-moz-any-link {
     padding: 1rem;
   }
 }
-  
+
 input:focus, select:focus, textarea:focus {
   outline: 2px solid $red;
 }
-	
+
 p, textarea {
   font: 1rem/1.7rem $font;
 }
@@ -105,11 +105,11 @@ p {
   h1 {
     display: inline-block;
   }
-  
+
   h2 {
-    font: 200 3.5rem/4.9rem $font; 
+    font: 200 3.5rem/4.9rem $font;
   }
-  
+
   h3 {
     font: 200 2rem $font;
   }

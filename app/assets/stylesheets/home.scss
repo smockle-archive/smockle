@@ -6,15 +6,21 @@
 // #INTRO
 //
 
+.profile {
+  border-radius: 75px;
+  margin: 20px 0;
+  max-width: 150px;
+
+}
 
 //
 // #ABOUT
 //
-  
+
 #about .flex-title {
   margin-bottom: 0;
 }
-  
+
 #about .flex-content h4 {
   font-size: 1.6rem;
   margin-bottom: .5rem;
@@ -25,7 +31,7 @@
   color: $red;
   transition: color .2s linear;
 }
-  
+
 //
 // #PROJECTS
 //
@@ -41,7 +47,7 @@ $projects: 12;
 //
 // #FEEDS
 //
-  	
+
 #feeds img {
   max-height: 20rem;
   max-width: 25.7rem;
@@ -55,7 +61,7 @@ $projects: 12;
   min-height: 35.4rem;
   transition: min-height .6s linear;
 }
-	
+
 //
 // #PROJECT
 //
@@ -64,13 +70,13 @@ $projects: 12;
   margin-top: 2rem;
   text-align: left;
 }
-      
+
 #project .project-titles {
   flex-basis: 100%;
   text-align: center;
   width: 100%;
 }
-  
+
 #project .flex-title {
   margin: 0 0 .5rem 0;
 }
@@ -84,7 +90,7 @@ $projects: 12;
   font: 200 1.6rem/2rem $font;
   margin: 0 auto 1rem 0;
 }
-      
+
 #project .project-preview {
   border: 1px solid $gray;
   flex-basis: 100%;
@@ -97,7 +103,7 @@ $projects: 12;
   max-height: 638px;
   width: 100%;
 }
-      
+
 @for $n from 1 through $projects {
   #project .project-preview .image.i#{$n} {
     background: image-url("projects/" + $n + ".png") no-repeat center center;
@@ -107,7 +113,7 @@ $projects: 12;
 //
 // MEDIA QUERIES
 //
-      
+
 @media screen and (min-width: 440px) {
   #project {
     margin-top: 0;
@@ -117,16 +123,22 @@ $projects: 12;
 @media screen and (min-width: 50em) {
   #intro {
     margin-top: 5rem;
+
+    .profile {
+      border-radius: 100px;
+      margin: 0 0 20px 0;
+      max-width: 200px;
+    }
   }
-  
+
   #feeds img {
     max-height: 100%;
   }
-  
+
   #project {
     margin-top: 6.8rem;
   }
-  
+
   #project blockquote {
     font: 200 1.7rem/2.1rem $font;
   }

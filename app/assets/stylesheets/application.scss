@@ -70,7 +70,7 @@ $max-width: 1008px;
          asset-url("pacifico.ttf?9309851") format('truetype');
 }
 
-$font: "futura-pt", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font: "brandon-grotesque", "futura-pt", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @import "_fontello";
 
 //
@@ -120,7 +120,7 @@ header > .flex {
 
 header a {
   color: white;
-  
+
   &:hover {
     color: $gray;
   }

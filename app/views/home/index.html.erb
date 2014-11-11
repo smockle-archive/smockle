@@ -1,27 +1,28 @@
 <section id="intro" class="section">
     <div>
-        <h2>I'm Clay Miller,<br>
-            and I build the Internet.</h2>
-        <h3 class="section-title">Lorem ipsum isom dolor sit amet.</h3>
+      <%= image_tag "profile.jpg", alt: "Clay Miller", class: "profile" %>
+      <h2>I'm Clay Miller,<br>
+          and I build the Internet.</h2>
+      <h3 class="section-title">Lorem ipsum isom dolor sit amet.</h3>
     </div>
 </section>
 
 <section id="about" class="section">
     <div class="flex">
         <h3 class="flex-title">Here are my skills:</h3>
-      
+
         <div class="flex-content">
             <i class="icon-flow-tree"></i>
             <h4>Design.</h4>
             <p>I discuss project details with my clients and then create basic site mockups. I use Sass and ECMAScript 6 to deliver premier web experiences.</p>
         </div>
-      
+
         <div class="flex-content">
             <i class="icon-wrench"></i>
             <h4>Develop.</h4>
             <p>I build websites using Node.js, Ruby on Rails, Laravel or ASP.NET MVC. I write Yeoman generators, Ruby gems and jQuery plugins.</p>
         </div>
-      
+
         <div class="flex-content">
             <i class="icon-rocket"></i>
             <h4>Deploy.</h4>
@@ -33,7 +34,7 @@
 <section id="projects" class="section">
     <div class="flex">
         <h3 class="flex-title">Here are my recent projects:</h3>
-      
+
         <% @projects.each do |project| %>
         <div class="flex-content thumbnail">
             <h4 class="thumbnail-title"><%= project.name %></h4>
@@ -48,25 +49,25 @@
 <section id="feeds" class="section" data-ng-app="NG_SMOCKLE" data-ng-controller="feeds" data-ng-csp>
     <div class="flex">
         <h3 class="flex-title">Here are my feeds:</h3>
-        
+
         <div class="flex-content">
         <article class="feed">
           <img class="feed-content" data-ng-src="{{ instagram }}" alt="Latest Instagram photo">
           <cite class="feed-source">via <a href="https://instagram.com/claydm">Instagram</a></cite>
         </article>
         </div>
-        
+
         <div class="flex-content flex-double">
           <article class="feed">
             <blockquote class="feed-content" data-ng-bind-html-unsafe="twitter"></blockquote>
             <cite class="feed-source">via <a href="https://twitter.com/smockled">Twitter</a></cite>
           </article>
-            
+
           <article class="feed">
             <blockquote class="feed-content" data-ng-bind-html-unsafe="stackoverflow"></blockquote>
             <cite class="feed-source">via <a href="https://stackoverflow.com/users/1923134/smockle">Stack Overflow</a></cite>
           </article>
-            
+
           <article class="feed">
             <blockquote class="feed-content" data-ng-bind-html-unsafe="github"></blockquote>
             <cite class="feed-source">via <a href="https://github.com/smockle">Github</a></cite>
@@ -78,7 +79,7 @@
 <section id="contact" class="section">
     <div class="flex">
         <h3 class="flex-title">Contact me! Talk about a project, or just say hello.</h3>
-        
+
         <div class="form-wrapper">
           <ul class="loading hidden">
             <li class="loading-spinlet"></li>
@@ -86,12 +87,12 @@
             <li class="loading-spinlet"></li>
             <li class="loading-spinlet"></li>
           </ul>
-          
+
           <h4>Dear Smockle,</h4>
-          
+
           <%= form_for @message, :class => "form", :url => { :action => "mail", :controller => "home" }, :method => :post do |f| %>
             <%= f.text_area :content, :class => "form-textarea", :placeholder => "Your message. You could describe a project you'd like to work on, or you could ask more about my work. I can't wait to hear from you!" %>
-            
+
           <div class="form-controls">
               <span class="form-label">Sincerely,</span>
               <%= f.text_field :name, :class => "form-field", :placeholder => "Your name." %>
