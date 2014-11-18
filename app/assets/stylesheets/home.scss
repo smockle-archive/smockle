@@ -6,11 +6,12 @@
 // #INTRO
 //
 
-.profile {
+#intro .profile {
+  background-image: image-url("profile.jpg");
+  height: 150px;
+  width: 150px;
   border-radius: 75px;
-  margin: 20px 0;
-  max-width: 150px;
-
+  margin: 20px auto;
 }
 
 //
@@ -126,8 +127,9 @@ $projects: 12;
 
     .profile {
       border-radius: 100px;
-      margin: 0 0 20px 0;
-      max-width: 200px;
+      height: 200px;
+      margin: 0 auto 20px auto;
+      width: 200px;
     }
   }
 
